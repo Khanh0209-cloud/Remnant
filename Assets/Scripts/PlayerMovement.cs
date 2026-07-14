@@ -36,6 +36,9 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpRequested = false;
     private Vector3 initialScale;
 
+    [Header("Quest Settings")]
+    public bool hasWatch = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

@@ -1,14 +1,24 @@
 using UnityEngine;
-using TMPro; // Sử dụng TextMesh Pro đi kèm UGUI 2.0 trong Unity 6
+using TMPro;
+
+[System.Serializable]
+public struct DialogueLine
+{
+    public string speakerName;
+    [TextArea(3, 5)]
+    public string text;
+}
 
 public class NPC : MonoBehaviour, IInteractable
 {
     [Header("NPC Profile")]
     public string npcName = "Mion";
 
-    [Header("Dialogue Settings")]
-    [TextArea(3, 5)]
-    public string[] dialogueLines;
+    [Header("Dialogue Phase 1: Before Quest")]
+    public DialogueLine[] dialoguePhase1;
+
+    [Header("Dialogue Phase 2: After Quest")]
+    public DialogueLine[] dialoguePhase2;
     
     [Header("UI References")]
     [Tooltip("Kéo Panel chứa giao diện đối thoại vào đây")]
@@ -17,9 +27,10 @@ public class NPC : MonoBehaviour, IInteractable
     [Tooltip("Kéo TextMeshPro hiển thị nội dung lời thoại vào đây")]
     public TextMeshProUGUI dialogueText;
     
-    [Tooltip("Kéo TextMeshPro hiển thị tên NPC vào đây (Không bắt buộc)")]
+    [Tooltip("Kéo TextMeshPro hiển thị tên người nói vào đây (Không bắt buộc)")]
     public TextMeshProUGUI nameText;
 
+    private DialogueLine[] currentDialogue;
     private int currentLineIndex = 0;
     private bool isInteracting = false;
     private Transform playerTransform;
@@ -35,8 +46,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     void Update()
     {
-        // Nếu đang đối thoại và nhấn F hoặc Space để xem câu thoại tiếp theo
-        if (isInteracting && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Space)))
+        // CHỈ Click chuột trái để chuyển sang câu thoại tiếp theo
+        if (isInteracting && Input.GetMouseButtonDown(0))
         {
             NextLine();
         }
@@ -52,8 +63,8 @@ public class NPC : MonoBehaviour, IInteractable
         }
     }
 
-    // Hàm thực thi được gọi từ PlayerMovement khi đứng gần NPC và nhấn phím F
-    public void Interact()
+    // Hàm click chuột trái vào nhân vật Mion để xem lại đoạn hội thoại (nếu đang ở gần)
+    void OnMouseDown()
     {
         if (isInteracting) return;
 
@@ -61,17 +72,42 @@ public class NPC : MonoBehaviour, IInteractable
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            playerTransform = player.transform;
+            float distance = Vector2.Distance(transform.position, player.transform.position);
+            if (distance <= 2.5f) // Chỉ cho phép xem lại hội thoại khi đứng gần
+            {
+                playerTransform = player.transform;
+                StartDialogue(player.GetComponent<PlayerMovement>());
+            }
         }
-
-        StartDialogue();
     }
 
-    private void StartDialogue()
+    // Hàm thực thi tương tác phím F (bắt nguồn từ PlayerMovement)
+    public void Interact()
     {
-        if (dialogueLines == null || dialogueLines.Length == 0)
+        if (isInteracting) return;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
         {
-            Debug.LogWarning($"{npcName} chưa được thiết lập lời thoại nào!");
+            playerTransform = player.transform;
+            StartDialogue(player.GetComponent<PlayerMovement>());
+        }
+    }
+
+    private void StartDialogue(PlayerMovement playerScript)
+    {
+        // Kiểm tra xem người chơi đã có đồng hồ chưa để chọn mảng thoại phù hợp
+        bool hasWatch = false;
+        if (playerScript != null)
+        {
+            hasWatch = playerScript.hasWatch;
+        }
+
+        currentDialogue = hasWatch ? dialoguePhase2 : dialoguePhase1;
+
+        if (currentDialogue == null || currentDialogue.Length == 0)
+        {
+            Debug.LogWarning($"{npcName} chưa được thiết lập lời thoại cho giai đoạn này!");
             return;
         }
 
@@ -83,24 +119,27 @@ public class NPC : MonoBehaviour, IInteractable
             dialoguePanel.SetActive(true);
         }
 
-        if (nameText != null)
-        {
-            nameText.text = npcName;
-        }
-
         ShowLine();
     }
 
     private void ShowLine()
     {
+        DialogueLine currentLine = currentDialogue[currentLineIndex];
+
+        // Cập nhật lời thoại
         if (dialogueText != null)
         {
-            dialogueText.text = dialogueLines[currentLineIndex];
+            dialogueText.text = currentLine.text;
         }
         else
         {
-            // Dự phòng ghi Log ra Console nếu chưa kéo thả UI
-            Debug.Log($"[{npcName}]: {dialogueLines[currentLineIndex]}");
+            Debug.Log($"[{currentLine.speakerName}]: {currentLine.text}");
+        }
+
+        // Cập nhật tên người nói luân phiên
+        if (nameText != null)
+        {
+            nameText.text = currentLine.speakerName;
         }
     }
 
@@ -108,7 +147,7 @@ public class NPC : MonoBehaviour, IInteractable
     {
         currentLineIndex++;
 
-        if (currentLineIndex < dialogueLines.Length)
+        if (currentLineIndex < currentDialogue.Length)
         {
             ShowLine();
         }
