@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isGrounded;
     private bool jumpRequested = false;
+    private Vector3 initialScale;
 
     void Start()
     {
@@ -45,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.LogWarning("Không tìm thấy Animator trên nhân vật!");
         }
+
+        // Lưu lại kích thước ban đầu được thiết lập trong Unity Editor
+        initialScale = transform.localScale;
 
         // Kiểm tra an toàn cho groundCheck để tránh NullReferenceException
         if (groundCheck == null)
@@ -65,11 +69,11 @@ public class PlayerMovement : MonoBehaviour
         // 1. Nhận input di chuyển
         moveInput = Input.GetAxisRaw("Horizontal");
 
-        // 2. Lật nhân vật bằng localScale để lật cả các đối tượng con (interactPoint, groundCheck...)
+        // 2. Lật nhân vật bằng localScale nhưng giữ nguyên kích thước ban đầu (initialScale) để lật các đối tượng con
         if (moveInput > 0)
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(initialScale.x, initialScale.y, initialScale.z);
         else if (moveInput < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-initialScale.x, initialScale.y, initialScale.z);
 
         // 3. Kiểm tra chạm đất
         if (groundCheck != null)
