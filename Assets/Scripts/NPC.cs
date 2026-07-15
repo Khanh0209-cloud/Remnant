@@ -34,6 +34,7 @@ public class NPC : MonoBehaviour, IInteractable
     private int currentLineIndex = 0;
     private bool isInteracting = false;
     private Transform playerTransform;
+    private int startDialogueFrame = -1;
 
     void Start()
     {
@@ -47,7 +48,7 @@ public class NPC : MonoBehaviour, IInteractable
     void Update()
     {
         // CHỈ Click chuột trái để chuyển sang câu thoại tiếp theo
-        if (isInteracting && Input.GetMouseButtonDown(0))
+        if (isInteracting && Input.GetMouseButtonDown(0) && Time.frameCount > startDialogueFrame)
         {
             NextLine();
         }
@@ -113,6 +114,7 @@ public class NPC : MonoBehaviour, IInteractable
 
         isInteracting = true;
         currentLineIndex = 0;
+        startDialogueFrame = Time.frameCount;
 
         if (dialoguePanel != null)
         {
@@ -141,6 +143,8 @@ public class NPC : MonoBehaviour, IInteractable
         {
             nameText.text = currentLine.speakerName;
         }
+
+
     }
 
     private void NextLine()
