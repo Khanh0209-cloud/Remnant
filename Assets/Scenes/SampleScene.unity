@@ -601,9 +601,9 @@ MonoBehaviour:
   - speakerName: Mion
     text: That's right... At last, I've found it again.
   - speakerName: Mion
-    text: 'Thank you
+    text: 'Thank you.
 
-      . I can finally move on.'
+      I can finally move on.'
   - speakerName: Mion
     text: 'I hope you find the one you''re searching for.
 
