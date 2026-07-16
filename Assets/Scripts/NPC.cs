@@ -34,6 +34,10 @@ public class NPC : MonoBehaviour, IInteractable
     [Tooltip("Điền tên nhân vật chính xác để hệ thống bật Panel bên trái")]
     public string playerName = "Nox";
 
+    [Header("Quest Settings")]
+    [Tooltip("Bức tường tàng hình ngăn qua màn (Sẽ tự động biến mất khi xong nhiệm vụ)")]
+    public GameObject levelBlocker;
+
     private DialogueLine[] currentDialogue;
     private int currentLineIndex = 0;
     private bool isInteracting = false;
@@ -179,9 +183,16 @@ public class NPC : MonoBehaviour, IInteractable
         if (rightDialoguePanel != null) rightDialoguePanel.SetActive(false);
         if (leftDialoguePanel != null) leftDialoguePanel.SetActive(false);
 
-        // Mở khóa di chuyển lại cho người chơi
         if (currentPlayerScript != null)
         {
+            // KHOẢN THƯỞNG NHIỆM VỤ: Mở đường nếu đã có đồng hồ (Nói chuyện xong Phase 2)
+            if (currentPlayerScript.hasWatch && levelBlocker != null)
+            {
+                levelBlocker.SetActive(false);
+                Debug.Log("Đã mở khóa đường đi tiếp!");
+            }
+
+            // Mở khóa di chuyển lại cho người chơi
             currentPlayerScript.canMove = true;
             currentPlayerScript = null; // Trả lại trạng thái trống
         }
