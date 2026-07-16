@@ -20,29 +20,32 @@ public class NPC : MonoBehaviour, IInteractable
     [Header("Dialogue Phase 2: After Quest")]
     public DialogueLine[] dialoguePhase2;
     
-    [Header("UI References")]
-    [Tooltip("Kéo Panel chứa giao diện đối thoại vào đây")]
-    public GameObject dialoguePanel;
-    
-    [Tooltip("Kéo TextMeshPro hiển thị nội dung lời thoại vào đây")]
-    public TextMeshProUGUI dialogueText;
-    
-    [Tooltip("Kéo TextMeshPro hiển thị tên người nói vào đây (Không bắt buộc)")]
-    public TextMeshProUGUI nameText;
+    [Header("UI References (NPC - Bên Phải)")]
+    public GameObject rightDialoguePanel;
+    public TextMeshProUGUI rightDialogueText;
+    public TextMeshProUGUI rightNameText;
+
+    [Header("UI References (Player - Bên Trái)")]
+    public GameObject leftDialoguePanel;
+    public TextMeshProUGUI leftDialogueText;
+    public TextMeshProUGUI leftNameText;
+
+    [Header("Name Tag Setup")]
+    [Tooltip("Điền tên nhân vật chính xác để hệ thống bật Panel bên trái")]
+    public string playerName = "Nox";
 
     private DialogueLine[] currentDialogue;
     private int currentLineIndex = 0;
     private bool isInteracting = false;
     private Transform playerTransform;
+    private PlayerMovement currentPlayerScript;
     private int startDialogueFrame = -1;
 
     void Start()
     {
         // Tự động ẩn Panel hội thoại khi bắt đầu game
-        if (dialoguePanel != null)
-        {
-            dialoguePanel.SetActive(false);
-        }
+        if (rightDialoguePanel != null) rightDialoguePanel.SetActive(false);
+        if (leftDialoguePanel != null) leftDialoguePanel.SetActive(false);
     }
 
     void Update()
@@ -97,6 +100,15 @@ public class NPC : MonoBehaviour, IInteractable
 
     private void StartDialogue(PlayerMovement playerScript)
     {
+        // Lưu lại script của người chơi để lát nữa mở khóa di chuyển
+        currentPlayerScript = playerScript;
+
+        // Khóa di chuyển của người chơi
+        if (currentPlayerScript != null)
+        {
+            currentPlayerScript.canMove = false;
+        }
+
         // Kiểm tra xem người chơi đã có đồng hồ chưa để chọn mảng thoại phù hợp
         bool hasWatch = false;
         if (playerScript != null)
@@ -109,17 +121,15 @@ public class NPC : MonoBehaviour, IInteractable
         if (currentDialogue == null || currentDialogue.Length == 0)
         {
             Debug.LogWarning($"{npcName} chưa được thiết lập lời thoại cho giai đoạn này!");
+            
+            // Nếu lỗi, mở khóa lại ngay lập tức
+            if (currentPlayerScript != null) currentPlayerScript.canMove = true;
             return;
         }
 
         isInteracting = true;
         currentLineIndex = 0;
         startDialogueFrame = Time.frameCount;
-
-        if (dialoguePanel != null)
-        {
-            dialoguePanel.SetActive(true);
-        }
 
         ShowLine();
     }
@@ -128,23 +138,24 @@ public class NPC : MonoBehaviour, IInteractable
     {
         DialogueLine currentLine = currentDialogue[currentLineIndex];
 
-        // Cập nhật lời thoại
-        if (dialogueText != null)
+        if (currentLine.speakerName == playerName)
         {
-            dialogueText.text = currentLine.text;
+            // Bật bên trái, tắt bên phải
+            if (leftDialoguePanel != null) leftDialoguePanel.SetActive(true);
+            if (rightDialoguePanel != null) rightDialoguePanel.SetActive(false);
+
+            if (leftDialogueText != null) leftDialogueText.text = currentLine.text;
+            if (leftNameText != null) leftNameText.text = currentLine.speakerName;
         }
         else
         {
-            Debug.Log($"[{currentLine.speakerName}]: {currentLine.text}");
+            // Bật bên phải, tắt bên trái
+            if (rightDialoguePanel != null) rightDialoguePanel.SetActive(true);
+            if (leftDialoguePanel != null) leftDialoguePanel.SetActive(false);
+
+            if (rightDialogueText != null) rightDialogueText.text = currentLine.text;
+            if (rightNameText != null) rightNameText.text = currentLine.speakerName;
         }
-
-        // Cập nhật tên người nói luân phiên
-        if (nameText != null)
-        {
-            nameText.text = currentLine.speakerName;
-        }
-
-
     }
 
     private void NextLine()
@@ -165,9 +176,14 @@ public class NPC : MonoBehaviour, IInteractable
     {
         isInteracting = false;
         
-        if (dialoguePanel != null)
+        if (rightDialoguePanel != null) rightDialoguePanel.SetActive(false);
+        if (leftDialoguePanel != null) leftDialoguePanel.SetActive(false);
+
+        // Mở khóa di chuyển lại cho người chơi
+        if (currentPlayerScript != null)
         {
-            dialoguePanel.SetActive(false);
+            currentPlayerScript.canMove = true;
+            currentPlayerScript = null; // Trả lại trạng thái trống
         }
     }
 }
