@@ -33,6 +33,13 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         {
             hoverEffectObject.SetActive(false);
         }
+
+        // Bỏ qua các click vào vùng trong suốt (Alpha < 0.1)
+        // LƯU Ý: Phải tick chọn "Read/Write" trong Import Settings của tấm ảnh thì tính năng này mới hoạt động!
+        if (buttonImage != null)
+        {
+            buttonImage.alphaHitTestMinimumThreshold = 0.1f;
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)

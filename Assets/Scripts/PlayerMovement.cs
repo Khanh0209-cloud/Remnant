@@ -35,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool jumpRequested = false;
     private Vector3 initialScale;
+    
+    [Header("State Control")]
+    public bool canMove = true; // Biến kiểm soát nhân vật đứng yên
 
     [Header("Quest Settings")]
     public bool hasWatch = false;
@@ -69,6 +72,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        // KHÓA DI CHUYỂN NẾU ĐANG NÓI CHUYỆN
+        if (!canMove)
+        {
+            moveInput = 0;
+            jumpRequested = false;
+            
+            // Dừng animation chạy (nếu có)
+            if (anim != null) anim.SetFloat("Speed", 0);
+            return;
+        }
+
         // 1. Nhận input di chuyển
         moveInput = Input.GetAxisRaw("Horizontal");
 
