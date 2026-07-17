@@ -14,24 +14,23 @@ public class CombinationLockUI : MonoBehaviour
     private int[] correctCode = { 1, 2, 0, 2 };
 
     [Header("Phần thưởng mở khóa")]
-    public GameObject teddyBearPrefab;
-    public Transform spawnPoint; // Tọa độ rơi gấu bông
-    public PlayerMovement player; // Để mở khóa di chuyển
+    public SpriteRenderer suitcaseSpriteRenderer;
+    public Sprite openSuitcaseSprite;
+    public MonoBehaviour oldSuitcaseInteractable;
+    public MonoBehaviour newSuitcaseOpenedInteractable;
+    public PlayerMovement player;
 
     void Start()
     {
-        // Ban đầu các vòng xoay đều là 0
         UpdateDisplay();
     }
 
-    // Hàm này sẽ được gán vào sự kiện OnClick của 4 nút bấm
-    // Truyền index: 0 (nút đầu), 1 (nút 2), 2 (nút 3), 3 (nút 4)
     public void OnDigitClicked(int index)
     {
         currentDigits[index]++;
         if (currentDigits[index] > 9)
         {
-            currentDigits[index] = 0; // Vượt 9 thì quay về 0
+            currentDigits[index] = 0;
         }
         UpdateDisplay();
     }
@@ -47,7 +46,6 @@ public class CombinationLockUI : MonoBehaviour
         }
     }
 
-    // Hàm này gán vào sự kiện OnClick của nút Btn_Unlock
     public void TryUnlock()
     {
         bool isCorrect = true;
@@ -62,14 +60,18 @@ public class CombinationLockUI : MonoBehaviour
 
         if (isCorrect)
         {
-            Debug.Log("Suitcase: Bấm tách! Mở khóa Vali THÀNH CÔNG!");
+            Debug.Log("Suitcase: Mở khóa Vali THÀNH CÔNG!");
             
-            if (teddyBearPrefab != null && spawnPoint != null)
+            // Đổi hình vali sang trạng thái mở
+            if (suitcaseSpriteRenderer != null && openSuitcaseSprite != null)
             {
-                Instantiate(teddyBearPrefab, spawnPoint.position, Quaternion.identity);
+                suitcaseSpriteRenderer.sprite = openSuitcaseSprite;
             }
             
-            // Đóng bảng UI lại
+            // Tắt chức năng mở UI Passcode, bật chức năng mở UI Mini-game Gấu Bông
+            if (oldSuitcaseInteractable != null) oldSuitcaseInteractable.enabled = false;
+            if (newSuitcaseOpenedInteractable != null) newSuitcaseOpenedInteractable.enabled = true;
+            
             CloseUI();
         }
         else
@@ -83,7 +85,7 @@ public class CombinationLockUI : MonoBehaviour
         gameObject.SetActive(false);
         if (player != null)
         {
-            player.enabled = true; // Mở lại quyền di chuyển cho nhân vật
+            player.enabled = true;
         }
     }
 }
