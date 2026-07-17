@@ -6,6 +6,7 @@ public class Chapter2Manager : MonoBehaviour
     
     [Header("Trạng thái màn chơi")]
     public int papersCollected = 0;
+    public bool hasTalkedToMother = false; // Mới thêm: Phải nói chuyện xong mới được nhặt giấy
     public bool hasNecklace = false;
     public bool isLevelPassed = false;
     
