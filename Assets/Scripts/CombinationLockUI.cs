@@ -16,8 +16,8 @@ public class CombinationLockUI : MonoBehaviour
     [Header("Phần thưởng mở khóa")]
     public SpriteRenderer suitcaseSpriteRenderer;
     public Sprite openSuitcaseSprite;
-    public MonoBehaviour oldSuitcaseInteractable;
-    public MonoBehaviour newSuitcaseOpenedInteractable;
+    public SuitcaseInteractable oldSuitcaseInteractable;
+    public SuitcaseOpenedInteractable newSuitcaseOpenedInteractable;
     public PlayerMovement player;
 
     void Start()

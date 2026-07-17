@@ -152,13 +152,22 @@ public class PlayerMovement : MonoBehaviour
         
         if (hit != null)
         {
-            // Kiểm tra xem vật thể chạm vào có chứa script kế thừa IInteractable không
-            IInteractable interactable = hit.GetComponent<IInteractable>();
-            if (interactable != null)
+            // Lấy TẤT CẢ các script kế thừa IInteractable trên vật thể
+            IInteractable[] interactables = hit.GetComponents<IInteractable>();
+            bool interacted = false;
+            
+            foreach (var interactable in interactables)
             {
-                interactable.Interact();
+                // Chỉ chạy Interact nếu script đó đang được Tích Xanh (Enabled)
+                if (interactable is MonoBehaviour mb && mb.enabled)
+                {
+                    interactable.Interact();
+                    interacted = true;
+                    break;
+                }
             }
-            else
+            
+            if (!interacted && interactables.Length == 0)
             {
                 Debug.Log($"Phát hiện {hit.gameObject.name} nhưng nó không có script IInteractable.");
             }

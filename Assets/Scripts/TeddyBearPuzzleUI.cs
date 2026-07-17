@@ -5,6 +5,7 @@ public class TeddyBearPuzzleUI : MonoBehaviour
 {
     [Header("Các thành phần UI")]
     public GameObject bearFrontObj;
+    public GameObject rotateButtonObj; // Nút lật gấu mới thêm
     public GameObject bearBackLeftObj;
     public GameObject bearBackRightObj;
     public GameObject stuffingObj;
@@ -23,6 +24,7 @@ public class TeddyBearPuzzleUI : MonoBehaviour
     public void ResetPuzzle()
     {
         bearFrontObj.SetActive(true);
+        if (rotateButtonObj != null) rotateButtonObj.SetActive(true);
         bearBackLeftObj.SetActive(false);
         bearBackRightObj.SetActive(false);
         stuffingObj.SetActive(false);
@@ -31,11 +33,12 @@ public class TeddyBearPuzzleUI : MonoBehaviour
         necklaceZoomOpenObj.SetActive(false);
     }
 
-    // Gắn vào sự kiện OnClick của nút Gấu Mặt Trước
-    public void ClickBearFront()
+    // Gắn vào sự kiện OnClick của nút Rotate
+    public void ClickRotateButton()
     {
-        Debug.Log("Đã lật con gấu lại!");
+        Debug.Log("Đã bấm nút Rotate để lật con gấu lại!");
         bearFrontObj.SetActive(false);
+        if (rotateButtonObj != null) rotateButtonObj.SetActive(false);
         bearBackLeftObj.SetActive(true);
         bearBackRightObj.SetActive(true);
         // Bông và Dây chuyền chưa hiện, chờ người chơi Xé (Kéo) 2 nửa lưng
