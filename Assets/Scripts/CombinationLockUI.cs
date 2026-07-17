@@ -77,6 +77,20 @@ public class CombinationLockUI : MonoBehaviour
         else
         {
             Debug.Log("Suitcase: Sai mật mã, ổ khóa không nhúc nhích!");
+            
+            // Báo sai: Rung màn hình
+            CameraFollow cam = Camera.main.GetComponent<CameraFollow>();
+            if (cam != null)
+            {
+                cam.TriggerShake(0.3f, 0.1f);
+            }
+            
+            // Reset các số về 0
+            for (int i = 0; i < 4; i++)
+            {
+                currentDigits[i] = 0;
+            }
+            UpdateDisplay();
         }
     }
 

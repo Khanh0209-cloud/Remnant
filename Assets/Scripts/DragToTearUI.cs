@@ -16,6 +16,9 @@ public class DragToTearUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     [Tooltip("Kéo nửa lưng còn lại vào đây để chúng kiểm tra chéo nhau")]
     public DragToTearUI otherHalf;
+    
+    [Tooltip("Nếu tích, sẽ KHÔNG THỂ kéo mảnh này nếu nửa kia chưa bị xé")]
+    public bool mustWaitOtherHalf = false;
 
     void Awake()
     {
@@ -33,11 +36,15 @@ public class DragToTearUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     {
         // Không làm gì nếu đã bị xé
         if (isTorn) return;
+        
+        // Khóa kéo nếu bị yêu cầu đợi nửa kia
+        if (mustWaitOtherHalf && otherHalf != null && !otherHalf.isTorn) return;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (isTorn) return;
+        if (mustWaitOtherHalf && otherHalf != null && !otherHalf.isTorn) return;
         
         // Di chuyển ảnh theo chuột
         rectTransform.anchoredPosition += eventData.delta;

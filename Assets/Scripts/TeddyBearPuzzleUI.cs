@@ -41,15 +41,16 @@ public class TeddyBearPuzzleUI : MonoBehaviour
         if (rotateButtonObj != null) rotateButtonObj.SetActive(false);
         bearBackLeftObj.SetActive(true);
         bearBackRightObj.SetActive(true);
-        // Bông và Dây chuyền chưa hiện, chờ người chơi Xé (Kéo) 2 nửa lưng
-    }
-
-    // Hàm này sẽ được script DragToTear gọi khi cả 2 nửa bị xé ra đủ xa
-    public void OnBearTornApart()
-    {
-        Debug.Log("Đã xé lưng gấu, rơi ra bông và dây chuyền!");
+        
+        // Bật sẵn Bông và Dây chuyền nằm chìm bên dưới 2 nửa lưng gấu
         stuffingObj.SetActive(true);
         necklaceSmallObj.SetActive(true);
+    }
+
+    // Hàm này không cần bật gì thêm vì đồ vật đã hiển thị sẵn bên dưới
+    public void OnBearTornApart()
+    {
+        // Để trống
     }
 
     // Gắn vào sự kiện OnClick của nút Dây chuyền nhỏ
