@@ -19,6 +19,16 @@ public class CameraFollow : MonoBehaviour
     public float minY = -5f;
     public float maxY = 5f;
 
+    // Biến cho hiệu ứng Rung
+    private float shakeDuration = 0f;
+    private float shakeMagnitude = 0f;
+
+    public void TriggerShake(float duration, float magnitude)
+    {
+        shakeDuration = duration;
+        shakeMagnitude = magnitude;
+    }
+
     void LateUpdate()
     {
         if (target == null)
@@ -30,14 +40,21 @@ public class CameraFollow : MonoBehaviour
         // Tính toán vị trí trượt mượt mà
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
-        // Chặn giới hạn không cho Camera lọt ra khỏi toa tàu
+        // Chặn giới hạn
         if (useBounds)
         {
             smoothedPosition.x = Mathf.Clamp(smoothedPosition.x, minX, maxX);
             smoothedPosition.y = Mathf.Clamp(smoothedPosition.y, minY, maxY);
         }
 
-        // Cập nhật vị trí Camera
+        // Cập nhật vị trí
         transform.position = smoothedPosition;
+
+        // Xử lý hiệu ứng Rung đè lên vị trí hiện tại
+        if (shakeDuration > 0)
+        {
+            transform.position = transform.position + (Vector3)Random.insideUnitCircle * shakeMagnitude;
+            shakeDuration -= Time.deltaTime;
+        }
     }
 }

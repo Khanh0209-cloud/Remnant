@@ -2,27 +2,21 @@ using UnityEngine;
 
 public class Chapter2Manager : MonoBehaviour
 {
-    // Cung cấp một biến tĩnh để các script khác dễ dàng gọi tới Manager
     public static Chapter2Manager Instance;
     
     [Header("Trạng thái màn chơi")]
     public int papersCollected = 0;
+    public bool hasNecklace = false;
+    public bool isLevelPassed = false;
     
     [Header("Đồ vật sự kiện")]
-    [Tooltip("Kéo đài Cassette đang bị ẩn ở Hierarchy vào đây")]
     public GameObject cassettePlayer;
+    public GameObject levelBlocker; // Tường chặn
 
     void Awake()
     {
-        // Đảm bảo chỉ có 1 Instance
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     public void AddPaper()
@@ -30,13 +24,15 @@ public class Chapter2Manager : MonoBehaviour
         papersCollected++;
         Debug.Log("Đã nhặt " + papersCollected + "/3 mảnh giấy.");
         
-        // Khi nhặt đủ 3 mảnh, làm xuất hiện đài Cassette
         if (papersCollected >= 3)
         {
-            if (cassettePlayer != null)
+            if (cassettePlayer != null) cassettePlayer.SetActive(true);
+            
+            // Rung màn hình
+            CameraFollow cam = Camera.main.GetComponent<CameraFollow>();
+            if (cam != null)
             {
-                cassettePlayer.SetActive(true);
-                Debug.Log("Cassette Player đã bất ngờ xuất hiện trên ghế!");
+                cam.TriggerShake(0.5f, 0.1f);
             }
         }
     }

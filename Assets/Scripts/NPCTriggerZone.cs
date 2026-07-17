@@ -2,41 +2,22 @@ using UnityEngine;
 
 public class NPCTriggerZone : MonoBehaviour
 {
-    [Header("NPC Configuration")]
-    [Tooltip("Kéo GameObject của NPC Mion đang bị ẩn ở màn chơi vào đây")]
-    public GameObject npcToActivate;
+    [Tooltip("Kéo NPC Mẹ (đang bị ẩn) vào đây")]
+    public GameObject npcMother;
+    
+    private bool hasTriggered = false;
 
-    [Tooltip("Tự động kích hoạt đối thoại ngay khi NPC xuất hiện")]
-    public bool autoStartDialogue = true;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Kiểm tra xem đối tượng va chạm có phải là Player không
-        if (other.CompareTag("Player"))
+        // Kiểm tra xem người chạm vào vùng này có phải là Player không
+        if (!hasTriggered && collision.CompareTag("Player"))
         {
-            if (npcToActivate != null)
+            hasTriggered = true;
+            if (npcMother != null)
             {
-                // Kích hoạt NPC Mion
-                npcToActivate.SetActive(true);
-                Debug.Log($"{npcToActivate.name} đã được kích hoạt xuất hiện!");
-
-                // Tự động khởi chạy hội thoại nếu được thiết lập
-                if (autoStartDialogue)
-                {
-                    NPC npcScript = npcToActivate.GetComponent<NPC>();
-                    if (npcScript != null)
-                    {
-                        npcScript.Interact();
-                    }
-                }
+                npcMother.SetActive(true);
+                Debug.Log("Người mẹ đã đột ngột xuất hiện!");
             }
-            else
-            {
-                Debug.LogWarning("Chưa kéo thả NPC vào mục npcToActivate của Trigger Zone!");
-            }
-
-            // Tự hủy Trigger Zone này để nó chỉ kích hoạt duy nhất một lần
-            Destroy(gameObject);
         }
     }
 }
