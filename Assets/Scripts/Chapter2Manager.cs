@@ -20,21 +20,26 @@ public class Chapter2Manager : MonoBehaviour
         else Destroy(gameObject);
     }
 
+    private bool hasTriggeredCassette = false;
+
     public void AddPaper()
     {
         papersCollected++;
         Debug.Log("Đã nhặt " + papersCollected + "/3 mảnh giấy.");
+    }
+
+    public void TriggerCassetteEvent()
+    {
+        if (hasTriggeredCassette) return;
+        hasTriggeredCassette = true;
         
-        if (papersCollected >= 3)
+        if (cassettePlayer != null) cassettePlayer.SetActive(true);
+        
+        // Rung màn hình
+        CameraFollow cam = Camera.main.GetComponent<CameraFollow>();
+        if (cam != null)
         {
-            if (cassettePlayer != null) cassettePlayer.SetActive(true);
-            
-            // Rung màn hình
-            CameraFollow cam = Camera.main.GetComponent<CameraFollow>();
-            if (cam != null)
-            {
-                cam.TriggerShake(0.5f, 0.1f);
-            }
+            cam.TriggerShake(0.5f, 0.1f);
         }
     }
 }

@@ -39,9 +39,9 @@ public class DialogueManager : MonoBehaviour
     {
         if (player != null) player.enabled = false; // Khóa di chuyển
 
-        // Đợi người chơi nhả phím F ra (tránh tình trạng vừa bấm F để tương tác thì nó nhảy luôn câu thoại 1)
+        // Đợi người chơi nhả phím ra (tránh tình trạng vừa bấm để tương tác thì nó nhảy luôn câu thoại 1)
         yield return null; 
-        while (Input.GetKey(KeyCode.F)) yield return null;
+        while (Input.GetKey(KeyCode.F) || Input.GetMouseButton(0)) yield return null;
 
         foreach (ChatLine line in lines)
         {
@@ -61,15 +61,15 @@ public class DialogueManager : MonoBehaviour
                 if (rightDialogueText != null) rightDialogueText.text = line.sentence;
             }
 
-            // Dừng chờ người chơi bấm phím F
-            while (!Input.GetKeyDown(KeyCode.F))
+            // Dừng chờ người chơi bấm phím F hoặc Click chuột
+            while (!(Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0)))
             {
                 yield return null;
             }
             
-            // Chờ người chơi nhả phím F ra để đọc câu tiếp theo
+            // Chờ người chơi nhả phím ra để đọc câu tiếp theo
             yield return null;
-            while (Input.GetKey(KeyCode.F)) yield return null;
+            while (Input.GetKey(KeyCode.F) || Input.GetMouseButton(0)) yield return null;
         }
 
         // Chạy xong hết các câu thoại thì ẩn khung chat đi
