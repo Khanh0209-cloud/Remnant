@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [System.Serializable]
-public struct DialogueLine
+public struct ChatLine
 {
     public bool isLeftSpeaker; // true: Nox (Trái), false: NPC (Phải)
     public string speakerName;
@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Hàm gọi Hội thoại, sẽ khóa di chuyển của Player cho đến khi chạy xong
-    public IEnumerator PlayDialogueCoroutine(List<DialogueLine> lines, PlayerMovement player)
+    public IEnumerator PlayDialogueCoroutine(List<ChatLine> lines, PlayerMovement player)
     {
         if (player != null) player.enabled = false; // Khóa di chuyển
 
@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
         yield return null; 
         while (Input.GetKey(KeyCode.F)) yield return null;
 
-        foreach (DialogueLine line in lines)
+        foreach (ChatLine line in lines)
         {
             // Bật/tắt đúng bảng thoại
             leftChatPanel.SetActive(line.isLeftSpeaker);

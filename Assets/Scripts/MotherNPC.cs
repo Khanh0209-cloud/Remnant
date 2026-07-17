@@ -11,13 +11,13 @@ public class MotherNPC : MonoBehaviour, IInteractable
     public PlayerMovement player;
     
     [Header("Kịch bản thoại 1: Lần đầu gặp")]
-    public List<DialogueLine> firstMeetingLines;
+    public List<ChatLine> firstMeetingLines;
     
     [Header("Kịch bản thoại 2: Đưa dây chuyền (Trước khi con xuất hiện)")]
-    public List<DialogueLine> afterNecklacePart1Lines;
+    public List<ChatLine> afterNecklacePart1Lines;
     
     [Header("Kịch bản thoại 3: Đưa dây chuyền (Con đã ôm mẹ)")]
-    public List<DialogueLine> afterNecklacePart2Lines;
+    public List<ChatLine> afterNecklacePart2Lines;
 
     private bool isTalking = false;
     private bool hasFinishedCutscene = false;
