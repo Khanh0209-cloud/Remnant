@@ -4,9 +4,6 @@ using System.Collections.Generic;
 
 public class MotherNPC : MonoBehaviour, IInteractable
 {
-    [Tooltip("Kéo vật thể NPC Người Con (đang ẩn) vào đây")]
-    public GameObject sonNPC;
-    
     [Tooltip("Kéo nhân vật Nox vào đây để khóa di chuyển khi nói chuyện")]
     public PlayerMovement player;
     
@@ -19,8 +16,32 @@ public class MotherNPC : MonoBehaviour, IInteractable
     [Header("Kịch bản thoại 3: Đưa dây chuyền (Con đã ôm mẹ)")]
     public List<ChatLine> afterNecklacePart2Lines;
 
+    [Header("Hoạt ảnh (Animation)")]
+    public Animator anim;
+    [Tooltip("Thời gian chạy animation HugSon (giây)")]
+    public float hugDuration = 2f;
+    [Tooltip("Thời gian chạy animation Gone (giây)")]
+    public float goneDuration = 1.5f;
+    [Tooltip("Tích vào đây để đảo ngược chiều ngang (trục X) từ lúc bắt đầu ôm con")]
+    public bool flipHugAnimationX = true;
+    [Tooltip("Dịch chuyển nhân vật lên/xuống (trục Y) ngay khi phát animation Gone để bù lỗi lệch hình")]
+    public float goneOffsetY = 0.5f;
+
     private bool isTalking = false;
     private bool hasFinishedCutscene = false;
+    
+    void Start()
+    {
+        if (anim == null) anim = GetComponent<Animator>();
+    }
+
+    // Được gọi bởi MotherTriggerZone khi người chơi đi ngang qua
+    public void Appear()
+    {
+        gameObject.SetActive(true);
+        if (anim != null) anim.SetTrigger("Appear");
+        Debug.Log("NPC Mẹ đã xuất hiện!");
+    }
 
     public void Interact()
     {
@@ -63,18 +84,37 @@ public class MotherNPC : MonoBehaviour, IInteractable
         // 1. Chạy hội thoại phần 1 (Nox: I found this... -> Mẹ: This is our picture...)
         yield return StartCoroutine(DialogueManager.Instance.PlayDialogueCoroutine(afterNecklacePart1Lines, player));
         
-        // 2. Chèn cảnh Cutscene: Con xuất hiện
-        Debug.Log("(Mặt dây chuyền phát sáng. Cậu con trai xuất hiện và ôm lấy mẹ.)");
-        if (sonNPC != null) sonNPC.SetActive(true);
+        // 2. Chạy Animation Mẹ ôm con (Hoạt ảnh con chạy ra ôm nằm chung trong cục Animation này)
+        Debug.Log("Mẹ phát animation HugSon (Bao gồm cả Con xuất hiện)...");
         
-        // Chờ 1.5 giây để người chơi nhìn thấy thằng bé ôm mẹ
-        yield return new WaitForSeconds(1.5f);
+        // Xử lý đảo hướng từ lúc bắt đầu ôm con
+        if (flipHugAnimationX)
+        {
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.flipX = !sr.flipX;
+            }
+        }
+        
+        if (anim != null) anim.SetTrigger("HugSon");
+        
+        // Chờ hết thời gian animation HugSon
+        yield return new WaitForSeconds(hugDuration);
         
         // 3. Chạy hội thoại phần 2 (Con: Mom... -> Mẹ: Thank you Nox)
         yield return StartCoroutine(DialogueManager.Instance.PlayDialogueCoroutine(afterNecklacePart2Lines, player));
         
-        // 4. Kết thúc: Mẹ con tan biến, phá vỡ Màn chắn
-        Debug.Log("(Hai mẹ con tan thành những hạt sáng...)");
+        // 4. Chạy Animation Gone
+        Debug.Log("Mẹ phát animation Gone...");
+        
+        // Bù trừ lỗi lệch tọa độ lập tức
+        transform.position += new Vector3(0f, goneOffsetY, 0f);
+        
+        if (anim != null) anim.SetTrigger("Gone");
+        
+        // Chờ hết thời gian animation Gone
+        yield return new WaitForSeconds(goneDuration);
         
         if (Chapter2Manager.Instance != null)
         {
@@ -86,7 +126,7 @@ public class MotherNPC : MonoBehaviour, IInteractable
             }
         }
         
-        if (sonNPC != null) sonNPC.SetActive(false);
+        // Ẩn vật thể
         gameObject.SetActive(false);
         
         isTalking = false;
