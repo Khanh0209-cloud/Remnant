@@ -6,6 +6,10 @@ public class MainMenuController : MonoBehaviour
     [Header("UI References")]
     [Tooltip("Kéo Panel hoặc Image chứa ảnh Options Demo vào đây")]
     public GameObject optionsPanel;
+    
+    [Header("New Panels")]
+    public GameObject audioPanel;
+    public GameObject guidePanel;
 
     void Start()
     {
@@ -14,6 +18,8 @@ public class MainMenuController : MonoBehaviour
         {
             optionsPanel.SetActive(false);
         }
+        if (audioPanel != null) audioPanel.SetActive(false);
+        if (guidePanel != null) guidePanel.SetActive(false);
     }
 
     // Hàm gọi khi nhấn nút Play
@@ -39,6 +45,26 @@ public class MainMenuController : MonoBehaviour
         {
             optionsPanel.SetActive(false);
         }
+    }
+
+    public void OpenAudio()
+    {
+        if (audioPanel != null) audioPanel.SetActive(true);
+    }
+
+    public void CloseAudio()
+    {
+        if (audioPanel != null) audioPanel.SetActive(false);
+    }
+
+    public void OpenGuide()
+    {
+        if (guidePanel != null) guidePanel.SetActive(true);
+    }
+
+    public void CloseGuide()
+    {
+        if (guidePanel != null) guidePanel.SetActive(false);
     }
 
     // Hàm gọi khi nhấn nút Exit
