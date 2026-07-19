@@ -154,14 +154,30 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        // Quét một hình tròn tại vị trí interactPoint để tìm đồ vật thuộc interactLayer
-        Collider2D hit = Physics2D.OverlapCircle(interactPoint.position, interactRadius, interactLayer);
+        // --- HACK CỦA ANTIGRAVITY ĐỂ TRỊ LỖI ĐỨNG GẦN ---
+        // Lưu lại cài đặt gốc của Project
+        bool originalStartInColliders = Physics2D.queriesStartInColliders;
+        bool originalHitTriggers = Physics2D.queriesHitTriggers;
         
-        if (hit != null)
+        // Ép Unity BẮT BUỘC phải nhận diện vật thể dù Tâm quét (interactPoint) nằm chìm bên trong vật thể đó
+        Physics2D.queriesStartInColliders = true;
+        // Bắt buộc quét trúng cả các vật thể được đánh dấu là Trigger
+        Physics2D.queriesHitTriggers = true;
+
+        // Dùng OverlapCircleAll để lấy TẤT CẢ các vật thể trong vùng thay vì chỉ 1 vật thể ngẫu nhiên
+        Collider2D[] hits = Physics2D.OverlapCircleAll(interactPoint.position, interactRadius, interactLayer);
+        
+        // Trả lại cài đặt gốc để không làm hỏng các hệ thống vật lý khác của game
+        Physics2D.queriesStartInColliders = originalStartInColliders;
+        Physics2D.queriesHitTriggers = originalHitTriggers;
+        // ------------------------------------------------
+
+        bool interacted = false;
+
+        foreach (Collider2D hit in hits)
         {
-            // Lấy TẤT CẢ các script kế thừa IInteractable trên vật thể
+            // Lấy TẤT CẢ các script kế thừa IInteractable trên vật thể này
             IInteractable[] interactables = hit.GetComponents<IInteractable>();
-            bool interacted = false;
             
             foreach (var interactable in interactables)
             {
@@ -170,18 +186,14 @@ public class PlayerMovement : MonoBehaviour
                 {
                     interactable.Interact();
                     interacted = true;
-                    break;
+                    return; // Đã tương tác thành công thì thoát luôn, tránh tương tác cùng lúc nhiều đồ
                 }
             }
-            
-            if (!interacted && interactables.Length == 0)
-            {
-                Debug.Log($"Phát hiện {hit.gameObject.name} nhưng nó không có script IInteractable.");
-            }
         }
-        else
+        
+        if (!interacted)
         {
-            Debug.Log("Không có gì để tương tác ở trước mặt.");
+            Debug.Log("Không có gì (hợp lệ) để tương tác ở trước mặt.");
         }
     }
 

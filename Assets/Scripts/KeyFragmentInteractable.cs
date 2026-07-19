@@ -56,6 +56,10 @@ public class KeyFragmentInteractable : MonoBehaviour, IInteractable
         
         isReadyToPickUp = true;
         
+        // Tự động BẬT lại BoxCollider2D để cho phép người chơi nhặt
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = true;
+        
         // 3. Mở khóa cho Nox di chuyển lại để tiến tới nhặt chìa khóa
         if (player != null) player.enabled = true;
         
