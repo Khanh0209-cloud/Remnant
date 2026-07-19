@@ -505,7 +505,7 @@ RectTransform:
   m_GameObject: {fileID: 267613160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.9, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 455486732}
@@ -640,6 +640,7 @@ GameObject:
   - component: {fileID: 384214496}
   - component: {fileID: 384214495}
   - component: {fileID: 384214494}
+  - component: {fileID: 384214498}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -658,7 +659,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 16b14530eaf87c4459e24a4e8c5f6f6b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -757,7 +758,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 384ae6371ec4fa54a9850ae0644a6a37, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -853,13 +854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdeb2ac9b0a4ec47bbc3ab9e55fe938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  bgmSource: {fileID: 384214495}
-  sfxSource: {fileID: 384214494}
-  hoverSound: {fileID: 8300000, guid: 2143470a6c5950d4bb5e9226eea56106, type: 3}
-  clickSound: {fileID: 8300000, guid: e525a1c4e8c70744893dc0bbb6cccbd6, type: 3}
-  fadeInDuration: 5
-  maxBgmVolume: 0.5
-  gameplayBgmVolume: 0.2
 --- !u!4 &384214497
 Transform:
   m_ObjectHideFlags: 0
@@ -875,6 +869,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &384214498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384214493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06f9fe64e1bddc4783115d2252b3dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  themeSong: {fileID: 0}
+  bgmSource: {fileID: 0}
+  fadeInDuration: 2
+  maxBgmVolume: 1
+  gameplayBgmVolume: 0.05
+  walking_wooden: {fileID: 0}
+  cassette_appear: {fileID: 0}
+  open_cassette: {fileID: 0}
+  pickup_paper: {fileID: 0}
+  tap_cassette: {fileID: 0}
+  oppened_vali: {fileID: 0}
+  number_vali: {fileID: 0}
+  invalid_vali_puzzle: {fileID: 0}
+  solve_vali_puzzle: {fileID: 0}
+  open_necklace: {fileID: 0}
+  pickup_key: {fileID: 0}
+  complete: {fileID: 0}
+  hoverSound: {fileID: 8300000, guid: 117288509201f394b8226e5c8c9fd9c2, type: 3}
+  clickSound: {fileID: 8300000, guid: 16b14530eaf87c4459e24a4e8c5f6f6b, type: 3}
+  sfxSource: {fileID: 384214495}
 --- !u!1 &432407019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,7 +2568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124, y: -189}
+  m_AnchoredPosition: {x: 124, y: -214}
   m_SizeDelta: {x: 19200, y: 10800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1055440416

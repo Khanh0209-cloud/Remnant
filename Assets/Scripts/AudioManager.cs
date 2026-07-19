@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     [Tooltip("Âm lượng tối đa của nhạc nền (0.0 đến 1.0)")]
     public float maxBgmVolume = 1.0f;
     [Tooltip("Âm lượng nhạc nền trong màn chơi chính (rất nhỏ)")]
-    public float gameplayBgmVolume = 0.05f;
+    public float gameplayBgmVolume = 0.02f;
 
     [Header("Hiệu ứng âm thanh (SFX)")]
     public AudioClip walking_wooden;
@@ -41,16 +41,8 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        // Mỗi màn chơi sẽ dùng một AudioManager riêng biệt với các file âm thanh được setup riêng cho màn đó.
+        Instance = this;
 
         // Tạo kênh phát âm thanh riêng biệt nếu chưa kéo vào Inspector
         if (bgmSource == null) bgmSource = gameObject.AddComponent<AudioSource>();
@@ -106,8 +98,12 @@ public class AudioManager : MonoBehaviour
         
         if (bgmSource != null && bgmSource.clip != null)
         {
-            // Bắt đầu fade in âm thanh (MainMenu)
-            StartCoroutine(FadeInBGM());
+            // Xác định mức âm lượng mục tiêu dựa vào Scene hiện tại đang đứng
+            string currentScene = SceneManager.GetActiveScene().name;
+            float targetVol = (currentScene == "Chapter2" || currentScene == "SampleScene") ? gameplayBgmVolume : maxBgmVolume;
+            
+            // Bắt đầu fade in âm thanh
+            StartCoroutine(FadeInBGM(targetVol));
         }
     }
 
@@ -121,7 +117,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeInBGM()
+    private IEnumerator FadeInBGM(float targetVolume)
     {
         float currentTime = 0;
         bgmSource.volume = 0; 
@@ -130,10 +126,10 @@ public class AudioManager : MonoBehaviour
         while (currentTime < fadeInDuration)
         {
             currentTime += Time.deltaTime;
-            bgmSource.volume = Mathf.Lerp(0, maxBgmVolume, currentTime / fadeInDuration);
+            bgmSource.volume = Mathf.Lerp(0, targetVolume, currentTime / fadeInDuration);
             yield return null;
         }
-        bgmSource.volume = maxBgmVolume;
+        bgmSource.volume = targetVolume;
     }
 
     public void StartFadeOutBGM(float duration)
