@@ -1,0 +1,16 @@
+/[Ll]ibrary/
+/[ there ]Temp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Cc]aptures/
+/Assets/AssetStoreTools*
+
+# Visual Studio cache and settings
+.vs/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.userosscache
+*.sln
+*.suo

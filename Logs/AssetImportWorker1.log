@@ -1,0 +1,1734 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.3/staging' branch; Version is '6000.3.18f1 (5ebeb53e4c07) revision 6209205'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26200) CoreSingleLanguage' Language: 'en' Physical Memory: 24262 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Amin" at "2026-07-19T10:55:18.3051909Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-07-19T10:55:18Z
+
+COMMAND LINE ARGUMENTS:
+E:\unity\6000.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+E:/unity/Remnant
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+65410
+-licensingIpc
+LicenseClient-Amin
+-job-worker-count
+5
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: E:/unity/Remnant
+E:/unity/Remnant
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+Player connection [12132]  Target information:
+
+Player connection [12132]  * "[IP] 192.168.1.72 [Port] 0 [Flags] 2 [Guid] 729076407 [EditorId] 729076407 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-NLB5C32T) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [12132] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [12132] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 23.91 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.3.18f1 (5ebeb53e4c07)
+[Subsystems] Discovering subsystems at path E:/unity/6000.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path E:/unity/Remnant/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 4050 Laptop GPU (ID=0x28a1)
+    Vendor:          NVIDIA
+    VRAM:            5920 MB
+    App VRAM Budget: 5152 MB
+    Driver:          32.0.15.9595
+Initialize mono
+Mono path[0] = 'E:/unity/6000.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'E:/unity/6000.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'E:/unity/6000.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: E:/unity/6000.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003766 seconds.
+- Loaded All Assemblies, in  1.212 seconds
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.200 seconds
+Domain Reload Profiling: 2411ms
+	BeginReloadAssembly (443ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (123ms)
+	RebuildNativeTypeToScriptingClass (36ms)
+	initialDomainReloadingComplete (128ms)
+	LoadAllAssembliesAndSetupDomain (481ms)
+		LoadAssemblies (440ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (475ms)
+			TypeCache.Refresh (470ms)
+				TypeCache.ScanAssembly (437ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1201ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1074ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (147ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (265ms)
+			ProcessInitializeOnLoadAttributes (464ms)
+			ProcessInitializeOnLoadMethodAttributes (187ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Amin"
+[Licensing::IpcConnector] LicenseClient-Amin channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Amin-6000.3.18" at "2026-07-19T10:55:23.5279466Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 18068, path: "E:/unity/6000.3.18f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              d6e97de839bb4b76812a7d495850982f
+  Correlation Id:          335d7d43d96208149dcf1b0bca41e55e
+  External correlation Id: 1801125059935642205
+  Machine Id:              g0GhzYae+HyztSjNl2gx9yRpN5U=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Amin-6000.3.18" (connect: 0.00s, validation: 0.00s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Amin-6000.3.18-notifications" at "2026-07-19T10:55:23.5526424Z"
+[Licensing::Module] Licensing Background thread has ended after 5.25s
+[Licensing::Module] Licensing is initialized (took 0.52s).
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968465104006-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+- Loaded All Assemblies, in  2.100 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.03 ms, found 8 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Refreshing native plugins compatible for Editor in 3.18 ms, found 8 plugins.
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.429 seconds
+Domain Reload Profiling: 3528ms
+	BeginReloadAssembly (955ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (10ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (38ms)
+	RebuildCommonClasses (78ms)
+	RebuildNativeTypeToScriptingClass (27ms)
+	initialDomainReloadingComplete (74ms)
+	LoadAllAssembliesAndSetupDomain (964ms)
+		LoadAssemblies (753ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (517ms)
+			TypeCache.Refresh (366ms)
+				TypeCache.ScanAssembly (339ms)
+			BuildScriptInfoCaches (119ms)
+			ResolveRequiredComponents (24ms)
+	FinalizeReload (1430ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1078ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (247ms)
+			ProcessInitializeOnLoadAttributes (690ms)
+			ProcessInitializeOnLoadMethodAttributes (125ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 5.11 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7090 unused Assets / (4.9 MB). Loaded Objects now: 7903.
+Memory consumption went from 157.1 MB to 152.1 MB.
+Total: 13.244700 ms (FindLiveObjects: 0.757400 ms CreateObjectMapping: 0.770000 ms MarkObjects: 8.026000 ms  DeleteObjects: 3.688900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 337.630329 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00084.png
+  artifactKey: Guid(1feeec8b24c59864a90646abbcfa7c16) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00084.png using Guid(1feeec8b24c59864a90646abbcfa7c16) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd9ed4c6f2a490bf9df3f378cd3dea371') in 0.2821567 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00095.png
+  artifactKey: Guid(d953ad94337a9624694055764f388174) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00095.png using Guid(d953ad94337a9624694055764f388174) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'dbab34eeffc2def7597a5d93df182594') in 0.0621899 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Scripts/NPCDialogue.cs
+  artifactKey: Guid(057763330f317c142b10a8420d0d2864) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Scripts/NPCDialogue.cs using Guid(057763330f317c142b10a8420d0d2864) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8cc46f0fee979ead3c3cf27abddb22b1') in 0.033856 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00123.png
+  artifactKey: Guid(55f3fea1f9626e7448036f23f1c13043) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00123.png using Guid(55f3fea1f9626e7448036f23f1c13043) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6a0d8c6194f550bb962219206ce7928c') in 0.0569351 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00021.png
+  artifactKey: Guid(01550669df3895d46bc0e2de10b26dd5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00021.png using Guid(01550669df3895d46bc0e2de10b26dd5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '765bb4c8a20c856e627296b6548f0f98') in 0.0589357 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/ThemeSong_GamePlay.mp3
+  artifactKey: Guid(181aaffacd08cfa469bbef8b16ba5d5c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/ThemeSong_GamePlay.mp3 using Guid(181aaffacd08cfa469bbef8b16ba5d5c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '637b1cea961ebd8d3a68a1efd1870532') in 0.0608896 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00141.png
+  artifactKey: Guid(ce61613601396294583cfdf40724b095) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00141.png using Guid(ce61613601396294583cfdf40724b095) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'dbefa217d707905d75e358384af91521') in 0.0568616 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00156.png
+  artifactKey: Guid(a1422a6e5892c7f48b41fb9b07b5c06e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00156.png using Guid(a1422a6e5892c7f48b41fb9b07b5c06e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b44c50e996930f64d0b7069d8e642f54') in 0.0501007 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00080.png
+  artifactKey: Guid(24e19a8deb8606044be4d28c23c192e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00080.png using Guid(24e19a8deb8606044be4d28c23c192e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'eeb5d3960ce1e307a3da68b19cec01dc') in 0.0448184 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00163.png
+  artifactKey: Guid(063b077b5716e624fb27f89a5d304514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00163.png using Guid(063b077b5716e624fb27f89a5d304514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '59fc995fe8f8ee7669ca7849351b315c') in 0.0476574 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00152.png
+  artifactKey: Guid(7d8e0593fc9f0d14a9d26a1286546124) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00152.png using Guid(7d8e0593fc9f0d14a9d26a1286546124) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0b9bae6291b9a2e5bc3119f2ada7657d') in 0.0512535 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00146.png
+  artifactKey: Guid(7ea303ff111f06d469f971bccb4c2deb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00146.png using Guid(7ea303ff111f06d469f971bccb4c2deb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '966d41e2f4c0c4e65592c4a0808c480f') in 0.0509668 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00117.png
+  artifactKey: Guid(076dd8eebc5236444a340dfa97ae250c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00117.png using Guid(076dd8eebc5236444a340dfa97ae250c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'eb466ce20b7750f5344c4a24572e7365') in 0.0547556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00005.png
+  artifactKey: Guid(2a86063b7ba2ea14a955f16736d12dd4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00005.png using Guid(2a86063b7ba2ea14a955f16736d12dd4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'df5c382ddf9e70da3b2953482e16e52c') in 0.034398 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00066.png
+  artifactKey: Guid(97f8ab413783ad94d8662b6098af719b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00066.png using Guid(97f8ab413783ad94d8662b6098af719b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'da8a774b0d3138f1803e02768d19bd43') in 0.0373248 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00106.png
+  artifactKey: Guid(72ede859e4489b64691e3c922a03b47c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00106.png using Guid(72ede859e4489b64691e3c922a03b47c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f10a6d5c74caab821a03c0748aeb2462') in 0.0569134 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00038.png
+  artifactKey: Guid(eafb3ea7c62b98b43b55e692144ddaa9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00038.png using Guid(eafb3ea7c62b98b43b55e692144ddaa9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '01c77028b82a0ebbe00bb8ef8c4bc270') in 0.0365582 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00137.png
+  artifactKey: Guid(227378b8d291c66498bc7537eb128b3d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00137.png using Guid(227378b8d291c66498bc7537eb128b3d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '307099a3df733c333a7d57af04c2d18c') in 0.0551372 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00158.png
+  artifactKey: Guid(0fe4ceda5d3224d43a6254509a63e6bd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00158.png using Guid(0fe4ceda5d3224d43a6254509a63e6bd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '87f0e40e6e028b5afbf5e5c7eeb05101') in 0.0546135 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00077.png
+  artifactKey: Guid(ca8728fd52374f643a4d73a91ec1efa4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00077.png using Guid(ca8728fd52374f643a4d73a91ec1efa4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '58f13ddf14c4a6a523ba36a8f569d4e4') in 0.0363385 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00007.png
+  artifactKey: Guid(8d6468531d39fdf4f9e92d109703f41a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00007.png using Guid(8d6468531d39fdf4f9e92d109703f41a) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a3538618691fdd9219f4833e1bfd1314') in 0.0399714 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00019.png
+  artifactKey: Guid(fcb3212641777dc48a54a037480352f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00019.png using Guid(fcb3212641777dc48a54a037480352f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '56b950085328feb9f6df4156502d33f8') in 0.0397639 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00134.png
+  artifactKey: Guid(3ff962f84fc3eb149af8f603d8ac7974) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00134.png using Guid(3ff962f84fc3eb149af8f603d8ac7974) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '538cc5cc3df0d61035cb2f090ea55daa') in 0.0564147 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00039.png
+  artifactKey: Guid(411ccbf925a03434a9d4d1641385e61c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00039.png using Guid(411ccbf925a03434a9d4d1641385e61c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '9568df9d6f0f9871f862d92136bd4705') in 0.0374048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00032.png
+  artifactKey: Guid(dad628bc2010b53479338350a68053cf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00032.png using Guid(dad628bc2010b53479338350a68053cf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '813ce6b707bd1b7fc344ec585006801f') in 0.0388556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00149.png
+  artifactKey: Guid(d68e68762e936034f9a2c231b7e5a7aa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00149.png using Guid(d68e68762e936034f9a2c231b7e5a7aa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'cd196ba097972e23377d6a78b0147643') in 0.0493313 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00068.png
+  artifactKey: Guid(255240675caeff74992e5d8bef37b330) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00068.png using Guid(255240675caeff74992e5d8bef37b330) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f4a0385b9fbb1b208534c6b7f8b1c829') in 0.0336609 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00070.png
+  artifactKey: Guid(91d0dab21b622484b9f978e9de98045b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00070.png using Guid(91d0dab21b622484b9f978e9de98045b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2c68768a1c54d48707194591cb6cebc1') in 0.0362899 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00027.png
+  artifactKey: Guid(d31e06a65a880304fb0d15443fde89fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00027.png using Guid(d31e06a65a880304fb0d15443fde89fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '32b5e71cc18217276ba794910922647e') in 0.0364378 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00035.png
+  artifactKey: Guid(700db7943fa931040a52974d142736f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00035.png using Guid(700db7943fa931040a52974d142736f2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6a85f53f762f192fa64ab02264ab6c14') in 0.0363082 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00105.png
+  artifactKey: Guid(04f48d2931c62ab49a4488465d934f3f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00105.png using Guid(04f48d2931c62ab49a4488465d934f3f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4b2a6fd118c47a7bd8dac56974aa7804') in 0.0497568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Art/NPC/Hazel/KETLIEU.anim
+  artifactKey: Guid(8349555d532a52947af97cee2fd65250) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/KETLIEU.anim using Guid(8349555d532a52947af97cee2fd65250) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '43d3001df830d66734492b23976bf9d9') in 0.0448874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Marcellus-Regular SDF.asset
+  artifactKey: Guid(20461ba13cc34704f9ed763515d7da07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Marcellus-Regular SDF.asset using Guid(20461ba13cc34704f9ed763515d7da07) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a7851b2b4881166a5b1af2cc2e39b192') in 0.9822035 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00037.png
+  artifactKey: Guid(4c5f888457a57cf46b87721149894652) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00037.png using Guid(4c5f888457a57cf46b87721149894652) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f54b6521229fb01bfe812eaf5f4b454f') in 0.0322582 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00033.png
+  artifactKey: Guid(ed56ffe00db956a43a57402cad4ca879) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00033.png using Guid(ed56ffe00db956a43a57402cad4ca879) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '934a1af4b594f51a545e64fb4b5cf7bb') in 0.0324423 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00026.png
+  artifactKey: Guid(86a37afefe4c49240a2bf0ce5561bcc6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00026.png using Guid(86a37afefe4c49240a2bf0ce5561bcc6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e6486b9b4902c38779a187cf1192364b') in 0.0329515 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00043.png
+  artifactKey: Guid(bedc3c5fa9193d44da146a3371b36433) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00043.png using Guid(bedc3c5fa9193d44da146a3371b36433) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '849d62230d946a34487b849a4bc7cebd') in 0.0327603 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00124.png
+  artifactKey: Guid(4e515a94a503b1440b49222550f2d656) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00124.png using Guid(4e515a94a503b1440b49222550f2d656) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b483ff14f5b09c5f85423e9999370ca6') in 0.0351533 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00148.png
+  artifactKey: Guid(f5b13fc322dcede4a91287cc28338964) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00148.png using Guid(f5b13fc322dcede4a91287cc28338964) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0a4db6298ca3b48c78d1676ae2747bda') in 0.0375503 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00052.png
+  artifactKey: Guid(051a30cd413dce5478b06db7a3100cba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00052.png using Guid(051a30cd413dce5478b06db7a3100cba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5ba4c1bcd3a3d79e56b446a2c072117a') in 0.0368222 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00062.png
+  artifactKey: Guid(f65aecee08ff6f145a40d943d31a20ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00062.png using Guid(f65aecee08ff6f145a40d943d31a20ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b2654812546ba2026f4587c243c5cebc') in 0.035931 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00136.png
+  artifactKey: Guid(04cc32504b5b7aa4dae25e2ccf9e7585) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00136.png using Guid(04cc32504b5b7aa4dae25e2ccf9e7585) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd77f83fcf51f0599dec5fbd441f83c32') in 0.0360205 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00000.png
+  artifactKey: Guid(b8c4e5199a00678419d12f69e01d222c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00000.png using Guid(b8c4e5199a00678419d12f69e01d222c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4cabb4e3ef8bdec9784c28050da425b9') in 0.030048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00082.png
+  artifactKey: Guid(327ceeb49c6c1a04ca0ccf92494c057d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00082.png using Guid(327ceeb49c6c1a04ca0ccf92494c057d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8d13acbb439d1d6aca097436291b685b') in 0.034161 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00162.png
+  artifactKey: Guid(c050d18d3ca4ca24e9485180dddb4530) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00162.png using Guid(c050d18d3ca4ca24e9485180dddb4530) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f988c28b3c423250ce160c98520f5487') in 0.0328374 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00151.png
+  artifactKey: Guid(5063e9d97248936438686f39b4d4e320) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00151.png using Guid(5063e9d97248936438686f39b4d4e320) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ca63af8922905a8a26fe497a923ddeba') in 0.0310976 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00057.png
+  artifactKey: Guid(399210a939a3ecf4a9fc19ab47f765ff) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00057.png using Guid(399210a939a3ecf4a9fc19ab47f765ff) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '019104e75af6392d06c4b7f11be2a728') in 0.0362246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00073.png
+  artifactKey: Guid(d991d5387f294bb46a5f7d2ef6ffd029) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00073.png using Guid(d991d5387f294bb46a5f7d2ef6ffd029) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2889076d35fbee6139f35b78e05dc42a') in 0.033557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00089.png
+  artifactKey: Guid(9116a74cada891941a32a2d65d0ee810) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00089.png using Guid(9116a74cada891941a32a2d65d0ee810) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '51a604cf0fea616fc485878610c26b50') in 0.0374766 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00090.png
+  artifactKey: Guid(8493c6ec70138814b82ec2529cd38c05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00090.png using Guid(8493c6ec70138814b82ec2529cd38c05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'be9ffaf3211897bcff98c981be002136') in 0.0349545 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00036.png
+  artifactKey: Guid(44f6cff57c8db8345bb54ef8cdece3d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00036.png using Guid(44f6cff57c8db8345bb54ef8cdece3d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '376efc05aef0ab9db3dec3fd5c4f1384') in 0.0330183 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00097.png
+  artifactKey: Guid(1a03e93310ae12c45ae6c1a8236ccdcb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00097.png using Guid(1a03e93310ae12c45ae6c1a8236ccdcb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e649218d917fa518e362403e554b7cbb') in 0.0295581 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'dd011c1c77ae348c4078c73c5c4475a8') in 0.1170929 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 97.909806 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00102.png
+  artifactKey: Guid(1d5f14eb3b7e4e64ba492ca460f22227) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00102.png using Guid(1d5f14eb3b7e4e64ba492ca460f22227) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bdbf8d2dabb71d66bed1a9089d7dd34e') in 0.2087916 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00114.png
+  artifactKey: Guid(e19c52fe72f34ad4ab5eb4aeace295f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00114.png using Guid(e19c52fe72f34ad4ab5eb4aeace295f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '930eb03392c2049c92b09074288b6170') in 0.0536888 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00145.png
+  artifactKey: Guid(452c90fbe9f920d4688756f482ce0fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00145.png using Guid(452c90fbe9f920d4688756f482ce0fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eaca987d102621fbfc97ca7481ebc098') in 0.0587841 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00133.png
+  artifactKey: Guid(385e381684b85f14d88343165a9cf480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00133.png using Guid(385e381684b85f14d88343165a9cf480) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '57cccb7f4603b9d51a77c80c2586e9ad') in 0.0386118 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00012.png
+  artifactKey: Guid(4e252c50b45f79847af6fe9a4ea087d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00012.png using Guid(4e252c50b45f79847af6fe9a4ea087d6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b5de6309f428fbf64d934e14345a7f26') in 0.0609094 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00060.png
+  artifactKey: Guid(a1083e4571f218546bfc81aea31f5058) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00060.png using Guid(a1083e4571f218546bfc81aea31f5058) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f13807b60abdd8799f799d3c36c2a2a1') in 0.0520291 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00131.png
+  artifactKey: Guid(c12d587349c52044895afbf05df803b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00131.png using Guid(c12d587349c52044895afbf05df803b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'abe86e284dd202b8aa43547a5822d822') in 0.0604215 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00110.png
+  artifactKey: Guid(90a36943953a7254d81108840c9f51cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00110.png using Guid(90a36943953a7254d81108840c9f51cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2141063a24b5b9a93c17a2222c523e31') in 0.0703567 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00148.png
+  artifactKey: Guid(f5b13fc322dcede4a91287cc28338964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00148.png using Guid(f5b13fc322dcede4a91287cc28338964) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d980c2e0820e900fd40857550843942') in 0.0616266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00118.png
+  artifactKey: Guid(0084402148972b842abf3ebd58a4df79) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00118.png using Guid(0084402148972b842abf3ebd58a4df79) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f7ac5c4d61869cb48f3143de77c73c14') in 0.0816912 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00134.png
+  artifactKey: Guid(3ff962f84fc3eb149af8f603d8ac7974) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00134.png using Guid(3ff962f84fc3eb149af8f603d8ac7974) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8a011c0bbf05a94a6e44c16dd5535a5d') in 0.0742276 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00079.png
+  artifactKey: Guid(d5c7f061aca0eac4abf84f0799cea4d5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00079.png using Guid(d5c7f061aca0eac4abf84f0799cea4d5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '045117c8e29a894010dec9135cf24419') in 0.0691152 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00021.png
+  artifactKey: Guid(01550669df3895d46bc0e2de10b26dd5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00021.png using Guid(01550669df3895d46bc0e2de10b26dd5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7d64addb90f62cfeac2828c874ff6a75') in 0.063598 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00160.png
+  artifactKey: Guid(657d7363d5e082242bf0946ce14a9126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00160.png using Guid(657d7363d5e082242bf0946ce14a9126) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '970c12500e7a3956e40028674beafcc5') in 0.0470999 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00164.png
+  artifactKey: Guid(f6b1ccebb4dac3d418bfd9cc1f5be896) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00164.png using Guid(f6b1ccebb4dac3d418bfd9cc1f5be896) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7c19aeda8d3fdf2defa23cc911692e51') in 0.0517086 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00066.png
+  artifactKey: Guid(97f8ab413783ad94d8662b6098af719b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00066.png using Guid(97f8ab413783ad94d8662b6098af719b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bb8c5147e1d8836c67f0b31736c130d5') in 0.0792542 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00143.png
+  artifactKey: Guid(a701b59f2e699154a8a8eb0937807f16) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00143.png using Guid(a701b59f2e699154a8a8eb0937807f16) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '67ad54a272821d9ae85a2071e46f71e3') in 0.0791933 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00119.png
+  artifactKey: Guid(e921caa1abbb3a8448af71b35a657b2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00119.png using Guid(e921caa1abbb3a8448af71b35a657b2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ec3a665f653bd5a4cd28c50504edfa6') in 0.0821226 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00103.png
+  artifactKey: Guid(d91c399349a608e44a30b8cec5a268a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00103.png using Guid(d91c399349a608e44a30b8cec5a268a5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6f4b7b96f4ad7a30d3685b089e8cee3c') in 0.0684814 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00120.png
+  artifactKey: Guid(7bf421a61d7769a40970689d370de586) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00120.png using Guid(7bf421a61d7769a40970689d370de586) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '4dd8bdb5f58c1b6895e1ea9fa9245232') in 0.0652161 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00163.png
+  artifactKey: Guid(063b077b5716e624fb27f89a5d304514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00163.png using Guid(063b077b5716e624fb27f89a5d304514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '61e3e85c821b6f61719aded2ef61a7e2') in 0.0712677 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00132.png
+  artifactKey: Guid(b1ad01eeff7e95c408780e3d8de1c6a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00132.png using Guid(b1ad01eeff7e95c408780e3d8de1c6a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a17ae39dbb43f5e2d869a3db844d6c07') in 0.0513194 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00159.png
+  artifactKey: Guid(0576b3fbab606a648b64346d27d2a41c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00159.png using Guid(0576b3fbab606a648b64346d27d2a41c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'bb4627b156b86bca76f1d4d6ab916b00') in 0.0489015 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00146.png
+  artifactKey: Guid(7ea303ff111f06d469f971bccb4c2deb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00146.png using Guid(7ea303ff111f06d469f971bccb4c2deb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8bcfa9e313bc91df8ced8bc48012e198') in 0.0501788 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00117.png
+  artifactKey: Guid(076dd8eebc5236444a340dfa97ae250c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00117.png using Guid(076dd8eebc5236444a340dfa97ae250c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'eeb422c39f11a711b449401af5c43d36') in 0.0526979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00076.png
+  artifactKey: Guid(cc8275438d14ee141a8e2bf12e696813) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00076.png using Guid(cc8275438d14ee141a8e2bf12e696813) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '63c69df56f67ef7bf3a2ddf7462fd499') in 0.0550386 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00156.png
+  artifactKey: Guid(a1422a6e5892c7f48b41fb9b07b5c06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00156.png using Guid(a1422a6e5892c7f48b41fb9b07b5c06e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4e05d2acd4411cd7aa86a3aca21c4cbd') in 0.0500111 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00077.png
+  artifactKey: Guid(ca8728fd52374f643a4d73a91ec1efa4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00077.png using Guid(ca8728fd52374f643a4d73a91ec1efa4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '51cd28e75ba7d44541fa1f573d42b983') in 0.0509548 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00137.png
+  artifactKey: Guid(227378b8d291c66498bc7537eb128b3d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00137.png using Guid(227378b8d291c66498bc7537eb128b3d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f55b5b75cc145e6106a8f2c4284a13ec') in 0.0451637 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00063.png
+  artifactKey: Guid(ce777c8afefbd2242b76d27860239fb4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00063.png using Guid(ce777c8afefbd2242b76d27860239fb4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '335112c16f046d667fbeb63cb0b4f700') in 0.0632762 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00113.png
+  artifactKey: Guid(84f078c7a721aa248947a45dccca36ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00113.png using Guid(84f078c7a721aa248947a45dccca36ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '829c9b42515c17ccd757e00ed6e791cb') in 0.0682188 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00155.png
+  artifactKey: Guid(a27ff6e2e0f1bed4f817301a33ad90d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00155.png using Guid(a27ff6e2e0f1bed4f817301a33ad90d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1019ceb92e79e53d27b7c31d73138edc') in 0.0451034 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00091.png
+  artifactKey: Guid(f076c1f6a56d9b040ab9236d8486a92c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00091.png using Guid(f076c1f6a56d9b040ab9236d8486a92c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '205faaf30f5de88f20f05b05ff8f20da') in 0.0496287 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00027.png
+  artifactKey: Guid(d31e06a65a880304fb0d15443fde89fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00027.png using Guid(d31e06a65a880304fb0d15443fde89fc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f8c3fb5f27039486ebbfda19ff61a9e2') in 0.0524598 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00128.png
+  artifactKey: Guid(69bdf306c00656d4baed749f30a403d9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00128.png using Guid(69bdf306c00656d4baed749f30a403d9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6f598dd315895aba11bd14e152273f8b') in 0.0474485 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00116.png
+  artifactKey: Guid(cf25a26767e1f3b459cc00fd73129375) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00116.png using Guid(cf25a26767e1f3b459cc00fd73129375) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ca1e9afbd64c7475ef0e3c383025e531') in 0.0604779 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00109.png
+  artifactKey: Guid(5670c58319d4ad848bd1a10632a57eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00109.png using Guid(5670c58319d4ad848bd1a10632a57eba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ed9bd028922bab18f17b586f98e4cb67') in 0.0620181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00134.png
+  artifactKey: Guid(3ff962f84fc3eb149af8f603d8ac7974) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00134.png using Guid(3ff962f84fc3eb149af8f603d8ac7974) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '66e4025a4a660157ade84e4eb9b15200') in 0.0461428 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00125.png
+  artifactKey: Guid(0fdaaf5ad4f51ca40a4287bf22bacaa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00125.png using Guid(0fdaaf5ad4f51ca40a4287bf22bacaa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c4ad8beed40d4e4e93992364d25a5c95') in 0.0498943 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00154.png
+  artifactKey: Guid(948b0fd24b5883849a5e3c326f644fcf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00154.png using Guid(948b0fd24b5883849a5e3c326f644fcf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '437abfee347dc3ff74bed67b2f9fc1b1') in 0.0556462 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00015.png
+  artifactKey: Guid(0bf9e1a60023d21438a2a15337b111b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00015.png using Guid(0bf9e1a60023d21438a2a15337b111b8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'd280d7eb04e54941790edf455248e5d1') in 0.05222 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00098.png
+  artifactKey: Guid(564470a1d020b3940982535bd8ca7fce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00098.png using Guid(564470a1d020b3940982535bd8ca7fce) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e3534eca900730cd9b9bae5a23423a71') in 0.0499301 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00071.png
+  artifactKey: Guid(cbbd12d175b70f04a81c723f84a499b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00071.png using Guid(cbbd12d175b70f04a81c723f84a499b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '99a826f3d696b6d1b5b7d755d2060a57') in 0.0646518 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00010.png
+  artifactKey: Guid(4f524b0ceb9d2604cb1197bb92a3ea86) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00010.png using Guid(4f524b0ceb9d2604cb1197bb92a3ea86) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'e708d53aef44223ec8c7ffb5fb379d7b') in 0.0550274 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00147.png
+  artifactKey: Guid(b45061d2a34357042883d8ced771cea5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00147.png using Guid(b45061d2a34357042883d8ced771cea5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7021340a094690019ca956724a995973') in 0.0501329 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00141.png
+  artifactKey: Guid(ce61613601396294583cfdf40724b095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00141.png using Guid(ce61613601396294583cfdf40724b095) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0effd17c0ecc1fb0f62f5c4f9c039e5b') in 0.0640167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00129.png
+  artifactKey: Guid(a06a20c0c02e02e4ebd0c4ccb753caf4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00129.png using Guid(a06a20c0c02e02e4ebd0c4ccb753caf4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '55e23034bda1e4a72020be17d906d162') in 0.0603686 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00045.png
+  artifactKey: Guid(0b1c482e09fc16843a470ed6fd799220) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00045.png using Guid(0b1c482e09fc16843a470ed6fd799220) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6a732f0d5ef6e82a16bf3154d8441570') in 0.0580302 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00096.png
+  artifactKey: Guid(354f70d4124bfc646a007b4699a7698b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00096.png using Guid(354f70d4124bfc646a007b4699a7698b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ff78816502fe519278ca0dac8e02562e') in 0.0627339 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00149.png
+  artifactKey: Guid(d68e68762e936034f9a2c231b7e5a7aa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00149.png using Guid(d68e68762e936034f9a2c231b7e5a7aa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '62197e9b55e8a4db4c2fc6d174df02a6') in 0.0503246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00006.png
+  artifactKey: Guid(d7bf42c7268119b48a28c801fcf15e2b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00006.png using Guid(d7bf42c7268119b48a28c801fcf15e2b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '97a19a9b4a316cb566a66abfcd4ae791') in 0.0538512 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00062.png
+  artifactKey: Guid(f65aecee08ff6f145a40d943d31a20ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00062.png using Guid(f65aecee08ff6f145a40d943d31a20ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c8f9ca2148e964c6b9252f6fa09f07f0') in 0.0517918 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00024.png
+  artifactKey: Guid(1bbbc736207488547ad4fc2115a59d3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00024.png using Guid(1bbbc736207488547ad4fc2115a59d3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f6cdca4c6421ca8541574f84b9380ba4') in 0.055183 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00140.png
+  artifactKey: Guid(fa5eda99b3ac15048a446bc61cc1f313) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00140.png using Guid(fa5eda99b3ac15048a446bc61cc1f313) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '5f744eefe78a6bf6f01db5f618256866') in 0.0585822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00000.png
+  artifactKey: Guid(b8c4e5199a00678419d12f69e01d222c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00000.png using Guid(b8c4e5199a00678419d12f69e01d222c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3bb0ebfd01327bb734c76d977e6f353b') in 0.0603352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00162.png
+  artifactKey: Guid(c050d18d3ca4ca24e9485180dddb4530) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00162.png using Guid(c050d18d3ca4ca24e9485180dddb4530) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '10dc72c218dfe28074594f0ce86b9211') in 0.0451858 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00067.png
+  artifactKey: Guid(a8d310e649220e74ab10593410641566) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00067.png using Guid(a8d310e649220e74ab10593410641566) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3f2d48b1d4adb57a273d933b95c1f789') in 0.0609 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00143.png
+  artifactKey: Guid(a701b59f2e699154a8a8eb0937807f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00143.png using Guid(a701b59f2e699154a8a8eb0937807f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c73509877f948c31907911e2a864bd5') in 0.0572812 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00138.png
+  artifactKey: Guid(1ead533c98a0f26458284c017522f420) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00138.png using Guid(1ead533c98a0f26458284c017522f420) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cdcfc4c1c944acf21fabbcbb102de851') in 0.0440463 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00138.png
+  artifactKey: Guid(1ead533c98a0f26458284c017522f420) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00138.png using Guid(1ead533c98a0f26458284c017522f420) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '28a2b46f77fb47884f61f9f08265a066') in 0.0588717 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000862 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00106.png
+  artifactKey: Guid(72ede859e4489b64691e3c922a03b47c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00106.png using Guid(72ede859e4489b64691e3c922a03b47c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7eb7194027733bab658733ff4de18704') in 0.0522928 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00036.png
+  artifactKey: Guid(44f6cff57c8db8345bb54ef8cdece3d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00036.png using Guid(44f6cff57c8db8345bb54ef8cdece3d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8320e0104fc946c28877cea49adff357') in 0.0505739 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00090.png
+  artifactKey: Guid(8493c6ec70138814b82ec2529cd38c05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00090.png using Guid(8493c6ec70138814b82ec2529cd38c05) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ff5b90864b17aab245e19c36a4db535e') in 0.0575822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00107.png
+  artifactKey: Guid(7e7f9e5ad46b3c74889277cd4f658730) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00107.png using Guid(7e7f9e5ad46b3c74889277cd4f658730) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c4176e9bbae4452853f766725079a2a7') in 0.0571758 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00121.png
+  artifactKey: Guid(b610b06d685f04b4e8cdea94cab56c18) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00121.png using Guid(b610b06d685f04b4e8cdea94cab56c18) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '6e2d7dedf4a4cc42d744c92e774e5be3') in 0.06302 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00115.png
+  artifactKey: Guid(b369bc61fa2fe7041beadc622b0dffcc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00115.png using Guid(b369bc61fa2fe7041beadc622b0dffcc) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '96b72f38c98c03a1aa2a4760df040172') in 0.0544371 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00019.png
+  artifactKey: Guid(fcb3212641777dc48a54a037480352f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00019.png using Guid(fcb3212641777dc48a54a037480352f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'fa4e81c70d3fef2dc82bfa5f46b8ea5f') in 0.0846091 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00105.png
+  artifactKey: Guid(04f48d2931c62ab49a4488465d934f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00105.png using Guid(04f48d2931c62ab49a4488465d934f3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d18e63d753bd092995bb14789fbdbd1') in 0.084926 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00164.png
+  artifactKey: Guid(f6b1ccebb4dac3d418bfd9cc1f5be896) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00164.png using Guid(f6b1ccebb4dac3d418bfd9cc1f5be896) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '48273cb53c6e9a87821372cf883ff84d') in 0.0644289 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00116.png
+  artifactKey: Guid(cf25a26767e1f3b459cc00fd73129375) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00116.png using Guid(cf25a26767e1f3b459cc00fd73129375) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd9939defc1ed7c9abec479de1028081f') in 0.057482 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00080.png
+  artifactKey: Guid(24e19a8deb8606044be4d28c23c192e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00080.png using Guid(24e19a8deb8606044be4d28c23c192e8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0b70580a18b5fa1b6cbfac3f819af5f3') in 0.0505519 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00130.png
+  artifactKey: Guid(9e0734036742ea94e8914f28faf9ffde) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00130.png using Guid(9e0734036742ea94e8914f28faf9ffde) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'f595f647fc9414e868b3fe4daa8ac7ac') in 0.0472209 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00001.png
+  artifactKey: Guid(168ca5331c7c8604fbf3f4f60f3c58e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00001.png using Guid(168ca5331c7c8604fbf3f4f60f3c58e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0447ef2841f0c8d1ef1c57a372455367') in 0.0621518 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00152.png
+  artifactKey: Guid(7d8e0593fc9f0d14a9d26a1286546124) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00152.png using Guid(7d8e0593fc9f0d14a9d26a1286546124) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '305f13c287057bcc8ea9fac5948ab987') in 0.0534971 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00114.png
+  artifactKey: Guid(e19c52fe72f34ad4ab5eb4aeace295f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00114.png using Guid(e19c52fe72f34ad4ab5eb4aeace295f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8f51cdd0e7a386e86683e66629655b68') in 0.0499185 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00032.png
+  artifactKey: Guid(dad628bc2010b53479338350a68053cf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00032.png using Guid(dad628bc2010b53479338350a68053cf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b7cb7bf6cd191cbb72414103d2484aa7') in 0.0496148 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00145.png
+  artifactKey: Guid(452c90fbe9f920d4688756f482ce0fcd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00145.png using Guid(452c90fbe9f920d4688756f482ce0fcd) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '8fdb452677527ca869b7d6d760a074a6') in 0.0555155 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00014.png
+  artifactKey: Guid(4ac3eb9ca6e38714d8b06d97952b1463) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00014.png using Guid(4ac3eb9ca6e38714d8b06d97952b1463) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '81f0e96d689fae83323c20b3d54e3829') in 0.0682172 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00042.png
+  artifactKey: Guid(5a8e2ceb8b7f95042b1978f05712a302) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00042.png using Guid(5a8e2ceb8b7f95042b1978f05712a302) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'c193cb8d65773d691ab408b47fd2e12b') in 0.0532364 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00070.png
+  artifactKey: Guid(91d0dab21b622484b9f978e9de98045b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00070.png using Guid(91d0dab21b622484b9f978e9de98045b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ac13a7aea8175c5dc13238b09d34d5fc') in 0.0496429 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00158.png
+  artifactKey: Guid(0fe4ceda5d3224d43a6254509a63e6bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00158.png using Guid(0fe4ceda5d3224d43a6254509a63e6bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f0b30790a04a2c2a817d6a2a38bcdb8') in 0.1260457 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00101.png
+  artifactKey: Guid(1c50674cc5b569048bd55d1f8f40ed00) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00101.png using Guid(1c50674cc5b569048bd55d1f8f40ed00) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ae579f57396e5ee2d3c92679464c604e') in 0.0654955 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00099.png
+  artifactKey: Guid(0a4c844b648e9774e87e6b4b9d5969d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00099.png using Guid(0a4c844b648e9774e87e6b4b9d5969d4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '08be70c997b7c3a2b44e8681e0d1a36a') in 0.0525762 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00008.png
+  artifactKey: Guid(904443dfc5e777d4e9dd7f01a57018c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00008.png using Guid(904443dfc5e777d4e9dd7f01a57018c2) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'ec6b50d590049ed5c5e46ffe201edcb0') in 0.046096 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00022.png
+  artifactKey: Guid(3cc2efbbe405232448f0a8d022eacf63) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00022.png using Guid(3cc2efbbe405232448f0a8d022eacf63) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b9a6e9da280ed218b129280bbaf98477') in 0.0565941 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00094.png
+  artifactKey: Guid(82958ce7d9e3f7b47b572882342e55b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00094.png using Guid(82958ce7d9e3f7b47b572882342e55b0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'a120088c08875a2b2e8a3f136ddabe38') in 0.0492396 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00132.png
+  artifactKey: Guid(b1ad01eeff7e95c408780e3d8de1c6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00132.png using Guid(b1ad01eeff7e95c408780e3d8de1c6a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fa8356f4a335a311c04226a67d64c5fc') in 0.0533762 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00033.png
+  artifactKey: Guid(ed56ffe00db956a43a57402cad4ca879) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00033.png using Guid(ed56ffe00db956a43a57402cad4ca879) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: 'b53a13930a3357f2293f40b4cd11da2f') in 0.0542918 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00054.png
+  artifactKey: Guid(37f74e72987db5d4a99cc34a3a284bca) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00054.png using Guid(37f74e72987db5d4a99cc34a3a284bca) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '3250309f6975dbd5baa7a5e9e0570615') in 0.0585427 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00128.png
+  artifactKey: Guid(69bdf306c00656d4baed749f30a403d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00128.png using Guid(69bdf306c00656d4baed749f30a403d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4138a4507b793694b1c20ba091e776a') in 0.0644959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00144.png
+  artifactKey: Guid(36c1b084dbef5234082c73ebb58ef412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00144.png using Guid(36c1b084dbef5234082c73ebb58ef412) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4879be3fe7a9857b4f64c81784b15d7b') in 0.0666733 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00115.png
+  artifactKey: Guid(b369bc61fa2fe7041beadc622b0dffcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00115.png using Guid(b369bc61fa2fe7041beadc622b0dffcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6ebf3eec8e4cf64f84e0c62d9ab2ade0') in 0.0621299 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00013.png
+  artifactKey: Guid(14b25d12e1b9dbe48af5a5507056a22f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00013.png using Guid(14b25d12e1b9dbe48af5a5507056a22f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '2cc6b6a972ad2e4267456628d7f18f82') in 0.0547791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00061.png
+  artifactKey: Guid(464fac1a2ca39854e8df082b31744183) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00061.png using Guid(464fac1a2ca39854e8df082b31744183) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '7eba968b226974e55fcce4aeba2f90d8') in 0.0411558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00157.png
+  artifactKey: Guid(5f66303aaf2249246a4fdebbcf52d1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00157.png using Guid(5f66303aaf2249246a4fdebbcf52d1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e47e42dc7ee44d715ae33786aba3854') in 0.0575673 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00074.png
+  artifactKey: Guid(553a72d7009f8c74e895ff0ed20cd686) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00074.png using Guid(553a72d7009f8c74e895ff0ed20cd686) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '36c96245e8f922d035d838a58fe2c6e4') in 0.0427585 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00111.png
+  artifactKey: Guid(36c163510c136ef46a315be79e7c3dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00111.png using Guid(36c163510c136ef46a315be79e7c3dc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b1cc26d3abc4194e36ae53fd02f38114') in 0.0468287 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00117.png
+  artifactKey: Guid(076dd8eebc5236444a340dfa97ae250c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00117.png using Guid(076dd8eebc5236444a340dfa97ae250c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8dbe95fffee2964cd59558d7158c811e') in 0.0415254 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00097.png
+  artifactKey: Guid(1a03e93310ae12c45ae6c1a8236ccdcb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00097.png using Guid(1a03e93310ae12c45ae6c1a8236ccdcb) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (artifact id: '0772dcee698f53f27e41586fcd55d7ac') in 0.0352751 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00124.png
+  artifactKey: Guid(4e515a94a503b1440b49222550f2d656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00124.png using Guid(4e515a94a503b1440b49222550f2d656) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7586cced6e111ce706e09819df33c570') in 0.0374078 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.074074 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00086.png
+  artifactKey: Guid(4e63143ae04c5e746a189f8b9878bdc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00086.png using Guid(4e63143ae04c5e746a189f8b9878bdc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '50b850387c35f38d5c5dab85c7793cec') in 0.0430233 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00078.png
+  artifactKey: Guid(907b0a37195af5b4481c2ad62bbfe999) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00078.png using Guid(907b0a37195af5b4481c2ad62bbfe999) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd3cc35d4b71030ef2ba75531b90384cf') in 0.0403076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00096.png
+  artifactKey: Guid(354f70d4124bfc646a007b4699a7698b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00096.png using Guid(354f70d4124bfc646a007b4699a7698b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70fa534ed753a9a8f2445086405d91e9') in 0.0425943 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00095.png
+  artifactKey: Guid(d953ad94337a9624694055764f388174) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00095.png using Guid(d953ad94337a9624694055764f388174) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd168b5c153fc2caec7a255273b1d2219') in 0.042174 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00020.png
+  artifactKey: Guid(8efb4821b48acf64295da93a3e769725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00020.png using Guid(8efb4821b48acf64295da93a3e769725) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2a88b3a9ec319ae00195473b522a7ce4') in 0.0420258 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00056.png
+  artifactKey: Guid(c1af1ead8f8c6144382942a738b6e1fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00056.png using Guid(c1af1ead8f8c6144382942a738b6e1fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87769a6e4dedd056476d358c08a32ef3') in 0.0419675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00001.png
+  artifactKey: Guid(168ca5331c7c8604fbf3f4f60f3c58e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00001.png using Guid(168ca5331c7c8604fbf3f4f60f3c58e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b40d15929948527c5af3e67832793cde') in 0.0388029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00073.png
+  artifactKey: Guid(d991d5387f294bb46a5f7d2ef6ffd029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00073.png using Guid(d991d5387f294bb46a5f7d2ef6ffd029) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '32d6227afa2ecc302baa0ce15c613f6c') in 0.039653 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00060.png
+  artifactKey: Guid(a1083e4571f218546bfc81aea31f5058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00060.png using Guid(a1083e4571f218546bfc81aea31f5058) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa0c6ebcea00154d614f20a506150044') in 0.044698 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00006.png
+  artifactKey: Guid(d7bf42c7268119b48a28c801fcf15e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00006.png using Guid(d7bf42c7268119b48a28c801fcf15e2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05cd55d164d7dd1f4a380066a0ae3316') in 0.0446472 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00057.png
+  artifactKey: Guid(399210a939a3ecf4a9fc19ab47f765ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00057.png using Guid(399210a939a3ecf4a9fc19ab47f765ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ad0c3e48cf26ecc97b023c85503e0692') in 0.0428321 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00067.png
+  artifactKey: Guid(a8d310e649220e74ab10593410641566) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00067.png using Guid(a8d310e649220e74ab10593410641566) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72286d8cdf8fa6d4551b92ba8c8281b8') in 0.0407758 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00008.png
+  artifactKey: Guid(904443dfc5e777d4e9dd7f01a57018c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00008.png using Guid(904443dfc5e777d4e9dd7f01a57018c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8cfc2feeacd52fa5773fa267e52b102a') in 0.0383218 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00009.png
+  artifactKey: Guid(1ff724371d49f564d8de38b9a2c63f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00009.png using Guid(1ff724371d49f564d8de38b9a2c63f25) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7f462c654a075a00f8c6fee0f6ac8e78') in 0.0380003 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00026.png
+  artifactKey: Guid(86a37afefe4c49240a2bf0ce5561bcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00026.png using Guid(86a37afefe4c49240a2bf0ce5561bcc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bafc506696dde1a6f3423a77bacf7d45') in 0.0375319 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00080.png
+  artifactKey: Guid(24e19a8deb8606044be4d28c23c192e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00080.png using Guid(24e19a8deb8606044be4d28c23c192e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e5cd58525763fdd9fd83a58aa12f115') in 0.041136 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00059.png
+  artifactKey: Guid(0bc83765abc0bdf45998d8c6a59c6730) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00059.png using Guid(0bc83765abc0bdf45998d8c6a59c6730) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd92619064cd127077568936549abfa44') in 0.0386734 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00007.png
+  artifactKey: Guid(8d6468531d39fdf4f9e92d109703f41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00007.png using Guid(8d6468531d39fdf4f9e92d109703f41a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9dba336e29f68b5d3e19475a3dafbdb') in 0.041361 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00016.png
+  artifactKey: Guid(07f79fd730bb0ee4291bb4722884f245) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00016.png using Guid(07f79fd730bb0ee4291bb4722884f245) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9835090a86799a71ef7f2fd52af8a350') in 0.0410055 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00089.png
+  artifactKey: Guid(9116a74cada891941a32a2d65d0ee810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00089.png using Guid(9116a74cada891941a32a2d65d0ee810) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2632cc9f1a90ffa35231489f4a760b06') in 0.0411977 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00064.png
+  artifactKey: Guid(7a8370583e712f34e93183d7d54d25aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00064.png using Guid(7a8370583e712f34e93183d7d54d25aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '98e167c38e1be11fde74d7479ba0b7ad') in 0.0407167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00084.png
+  artifactKey: Guid(1feeec8b24c59864a90646abbcfa7c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00084.png using Guid(1feeec8b24c59864a90646abbcfa7c16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '19825714152e610f37bd0a6364f6771e') in 0.0384609 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000067 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00030.png
+  artifactKey: Guid(824a8b62e82c46e4fa8cc2d5b944dc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00030.png using Guid(824a8b62e82c46e4fa8cc2d5b944dc88) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5a9ec3332e77df55093c90c224be0145') in 0.0454645 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00072.png
+  artifactKey: Guid(0dc629ffb29af5d44b364d76e1989915) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00072.png using Guid(0dc629ffb29af5d44b364d76e1989915) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97ac048e38d73f214f9695fda6d5d0fd') in 0.0420328 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00058.png
+  artifactKey: Guid(48522b06b64db2d40beabe579090ced0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00058.png using Guid(48522b06b64db2d40beabe579090ced0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06b797566a638415b19ae146c60f67cb') in 0.039847 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00061.png
+  artifactKey: Guid(464fac1a2ca39854e8df082b31744183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00061.png using Guid(464fac1a2ca39854e8df082b31744183) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1af3207d62ab25aff4c5ca17c89ff618') in 0.0411859 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00011.png
+  artifactKey: Guid(02434e5b8d0485c469d421899dc93c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00011.png using Guid(02434e5b8d0485c469d421899dc93c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '85c822bc91b64734dc3c901d7f34d950') in 0.0372452 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00010.png
+  artifactKey: Guid(4f524b0ceb9d2604cb1197bb92a3ea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00010.png using Guid(4f524b0ceb9d2604cb1197bb92a3ea86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1bbfcf9b4c0e295f6db1241456515125') in 0.0380709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00046.png
+  artifactKey: Guid(51175a1a0c6807746bc62864241b7f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00046.png using Guid(51175a1a0c6807746bc62864241b7f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '64c6902b96a456879418dd268d16837a') in 0.0385582 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00033.png
+  artifactKey: Guid(ed56ffe00db956a43a57402cad4ca879) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00033.png using Guid(ed56ffe00db956a43a57402cad4ca879) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2610b912421268721a6b1d99a1a880e0') in 0.0403703 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00005.png
+  artifactKey: Guid(2a86063b7ba2ea14a955f16736d12dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00005.png using Guid(2a86063b7ba2ea14a955f16736d12dd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '266ba38a2199e9289c6631bbef517d21') in 0.0380973 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00036.png
+  artifactKey: Guid(44f6cff57c8db8345bb54ef8cdece3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00036.png using Guid(44f6cff57c8db8345bb54ef8cdece3d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd5b76d3b2193e09dff6b8150b3e8c26') in 0.0366034 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00035.png
+  artifactKey: Guid(700db7943fa931040a52974d142736f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/NPC/Hazel/Untitled-1/Untitled-1_00035.png using Guid(700db7943fa931040a52974d142736f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8342ffae5f63158deb2cfc3da3840642') in 0.0391114 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
