@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
     // Hàm gọi khi nhấn nút Play
     public void PlayGame()
     {
-        StartCoroutine(LoadSceneWithDelay("SampleScene", 5f));
+        StartCoroutine(LoadSceneWithDelay("Chapter2", 5f));
     }
 
     private IEnumerator LoadSceneWithDelay(string sceneName, float delaySeconds)
