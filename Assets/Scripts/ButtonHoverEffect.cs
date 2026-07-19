@@ -35,6 +35,16 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         }
     }
 
+    void OnDisable()
+    {
+        // Reset trạng thái khi nút bị ẩn hoặc panel bị đè lên
+        SetAlpha(normalAlpha);
+        if (hoverEffectObject != null)
+        {
+            hoverEffectObject.SetActive(false);
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         // Khi chuột trỏ vào nút: Làm sáng chữ và bật hiệu ứng

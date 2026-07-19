@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class AudioManager : MonoBehaviour
     public float fadeInDuration = 2.0f;
     [Tooltip("Âm lượng tối đa của nhạc nền (0.0 đến 1.0)")]
     public float maxBgmVolume = 1.0f;
+    [Tooltip("Âm lượng nhạc nền trong màn chơi chính (rất nhỏ)")]
+    public float gameplayBgmVolume = 0.2f;
 
     private void Awake()
     {
@@ -30,6 +33,32 @@ public class AudioManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Nếu vào màn chơi chính (SampleScene), bật lại nhạc ở mức rất nhỏ
+        if (scene.name == "SampleScene")
+        {
+            if (bgmSource != null)
+            {
+                bgmSource.volume = gameplayBgmVolume;
+                if (!bgmSource.isPlaying)
+                {
+                    bgmSource.Play();
+                }
+            }
         }
     }
 
@@ -58,6 +87,30 @@ public class AudioManager : MonoBehaviour
 
         // Đảm bảo âm lượng đạt mức tối đa ở cuối
         bgmSource.volume = maxBgmVolume;
+    }
+
+    public void StartFadeOutBGM(float duration)
+    {
+        if (bgmSource != null)
+        {
+            StartCoroutine(FadeOutBGM(duration));
+        }
+    }
+
+    private IEnumerator FadeOutBGM(float duration)
+    {
+        float currentTime = 0;
+        float startVolume = bgmSource.volume;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            bgmSource.volume = Mathf.Lerp(startVolume, 0, currentTime / duration);
+            yield return null;
+        }
+
+        bgmSource.volume = 0;
+        bgmSource.Stop(); // Tắt hẳn nhạc
     }
 
     public void PlayHoverSound()

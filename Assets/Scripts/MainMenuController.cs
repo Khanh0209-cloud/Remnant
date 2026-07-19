@@ -39,7 +39,13 @@ public class MainMenuController : MonoBehaviour
             loadingPanel.SetActive(true);
         }
 
-        // Chờ khoảng thời gian (ở đây là 2 giây)
+        // Bắt đầu fade out nhạc nền bằng với thời gian chờ (delaySeconds)
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.StartFadeOutBGM(delaySeconds);
+        }
+
+        // Chờ khoảng thời gian (ở đây là 5 giây)
         yield return new WaitForSeconds(delaySeconds);
 
         // Chuyển scene
