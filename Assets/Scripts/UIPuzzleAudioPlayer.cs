@@ -33,6 +33,9 @@ public class UIPuzzleAudioPlayer : MonoBehaviour
         clickCount++;
         AudioClip clipToPlay = null;
 
+        // Trả tốc độ âm thanh (pitch) về bình thường mặc định
+        audioSource.pitch = 1f;
+
         // Phân loại âm thanh dựa trên số lần bấm
         if (clickCount == 1)
         {
@@ -42,6 +45,8 @@ public class UIPuzzleAudioPlayer : MonoBehaviour
         else if (clickCount >= 2 && clickCount <= 4)
         {
             clipToPlay = fastForwardSound;
+            // Kích tốc độ chạy của file âm thanh lên nhanh gấp 2.5 lần để tạo tiếng tua vội
+            audioSource.pitch = 2.5f; 
             Debug.Log("Lần " + clickCount + ": Phát tiếng tua nhanh...");
         }
         else // Lần 5 trở lên

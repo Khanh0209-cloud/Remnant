@@ -32,6 +32,10 @@ public class CombinationLockUI : MonoBehaviour
         {
             currentDigits[index] = 0;
         }
+        
+        // Phát âm cạch cạch xoay số
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayNumberVali();
+        
         UpdateDisplay();
     }
 
@@ -61,6 +65,9 @@ public class CombinationLockUI : MonoBehaviour
         if (isCorrect)
         {
             Debug.Log("Suitcase: Mở khóa Vali THÀNH CÔNG!");
+            
+            // Phát âm thanh thắng giải đố
+            if (AudioManager.Instance != null) AudioManager.Instance.PlaySolveValiPuzzle();
             
             // Đổi hình vali sang trạng thái mở
             if (suitcaseSpriteRenderer != null && openSuitcaseSprite != null)

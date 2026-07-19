@@ -28,6 +28,9 @@ public class PaperReaderUI : MonoBehaviour
             paperImageDisplay.sprite = paperContentSprite;
             panel.SetActive(true);
             
+            // Phát âm thanh nhặt giấy
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayPickupPaper();
+            
             // Khóa di chuyển khi đang xem giấy
             if (player != null) player.enabled = false;
         }
@@ -39,6 +42,9 @@ public class PaperReaderUI : MonoBehaviour
         if (panel != null)
         {
             panel.SetActive(false);
+            
+            // Phát âm thanh thả giấy
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayPickupPaper();
             
             // Mở lại di chuyển
             if (player != null) player.enabled = true;

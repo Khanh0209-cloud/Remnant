@@ -14,6 +14,9 @@ public class SuitcaseInteractable : MonoBehaviour, IInteractable
         {
             suitcaseUIPanel.SetActive(true);
             
+            // Phát âm thanh
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayOpenedVali();
+            
             // Khóa nhân vật không cho chạy lung tung lúc đang mở UI
             if (player != null)
             {

@@ -7,6 +7,9 @@ public class MotherNPC : MonoBehaviour, IInteractable
     [Tooltip("Kéo nhân vật Nox vào đây để khóa di chuyển khi nói chuyện")]
     public PlayerMovement player;
     
+    [Tooltip("Kéo vật thể Mảnh chìa khóa (chứa script KeyFragmentInteractable) vào đây")]
+    public KeyFragmentInteractable keyFragment;
+    
     [Header("Kịch bản thoại 1: Lần đầu gặp")]
     public List<ChatLine> firstMeetingLines;
     
@@ -116,17 +119,17 @@ public class MotherNPC : MonoBehaviour, IInteractable
         // Chờ hết thời gian animation Gone
         yield return new WaitForSeconds(goneDuration);
         
-        if (Chapter2Manager.Instance != null)
+        // Gọi mảnh chìa khóa xuất hiện từ từ
+        if (keyFragment != null)
         {
-            Chapter2Manager.Instance.isLevelPassed = true;
-            if (Chapter2Manager.Instance.levelBlocker != null)
-            {
-                Destroy(Chapter2Manager.Instance.levelBlocker);
-                Debug.Log("Màn chắn cửa đã vỡ vụn!");
-            }
+            keyFragment.StartFadeIn();
+        }
+        else
+        {
+            Debug.LogWarning("Bạn chưa kéo vật thể Mảnh Chìa Khóa vào script MotherNPC!");
         }
         
-        // Ẩn vật thể
+        // Ẩn vật thể Mẹ
         gameObject.SetActive(false);
         
         isTalking = false;
