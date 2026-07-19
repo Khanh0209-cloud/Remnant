@@ -45,6 +45,8 @@ public class NPC : MonoBehaviour, IInteractable
     private PlayerMovement currentPlayerScript;
     private int startDialogueFrame = -1;
 
+    [System.NonSerialized] public bool hasSpokenPhase1 = false;
+
     void Start()
     {
         // Tự động ẩn Panel hội thoại khi bắt đầu game
@@ -120,7 +122,20 @@ public class NPC : MonoBehaviour, IInteractable
             hasWatch = playerScript.hasWatch;
         }
 
-        currentDialogue = hasWatch ? dialoguePhase2 : dialoguePhase1;
+        // code cũ ngay dưới này là currentDialogue = hasWatch ? dialoguePhase2 : dialoguePhase1;
+        Debug.Log($"[NPC Debug] hasSpokenPhase1 = {hasSpokenPhase1} | hasWatch = {hasWatch}");
+        if (hasSpokenPhase1 == false)
+        {
+            currentDialogue = dialoguePhase1;
+        }
+        else if (hasSpokenPhase1 == true && hasWatch == true)
+        {
+            currentDialogue = dialoguePhase2;
+        }
+        else
+        {
+            currentDialogue = dialoguePhase1;
+        }
 
         if (currentDialogue == null || currentDialogue.Length == 0)
         {
@@ -183,10 +198,16 @@ public class NPC : MonoBehaviour, IInteractable
         if (rightDialoguePanel != null) rightDialoguePanel.SetActive(false);
         if (leftDialoguePanel != null) leftDialoguePanel.SetActive(false);
 
+        // --- 1. THÊM ĐOẠN NÀY ĐỂ ĐÁNH DẤU LÀ ĐÃ NÓI CHUYỆN ---
+        if (currentDialogue == dialoguePhase1)
+        {
+            hasSpokenPhase1 = true;
+        }
+
         if (currentPlayerScript != null)
         {
             // KHOẢN THƯỞNG NHIỆM VỤ: Mở đường nếu đã có đồng hồ (Nói chuyện xong Phase 2)
-            if (currentPlayerScript.hasWatch && levelBlocker != null)
+            if (currentDialogue == dialoguePhase2 && currentPlayerScript.hasWatch && levelBlocker != null)
             {
                 levelBlocker.SetActive(false);
                 Debug.Log("Đã mở khóa đường đi tiếp!");
