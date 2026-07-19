@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     private Image buttonImage;
     
@@ -35,6 +35,16 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         }
     }
 
+    void OnDisable()
+    {
+        // Reset trạng thái khi nút bị ẩn hoặc panel bị đè lên
+        SetAlpha(normalAlpha);
+        if (hoverEffectObject != null)
+        {
+            hoverEffectObject.SetActive(false);
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         // Khi chuột trỏ vào nút: Làm sáng chữ và bật hiệu ứng
@@ -43,6 +53,12 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (hoverEffectObject != null)
         {
             hoverEffectObject.SetActive(true);
+        }
+
+        // Phát âm thanh hover
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayHoverSound();
         }
     }
 
@@ -54,6 +70,15 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (hoverEffectObject != null)
         {
             hoverEffectObject.SetActive(false);
+        }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        // Phát âm thanh click ngay khi vừa nhấn chuột xuống (giảm độ trễ)
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayClickSound();
         }
     }
 

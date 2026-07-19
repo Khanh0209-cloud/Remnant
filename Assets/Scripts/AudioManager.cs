@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -7,7 +8,15 @@ public class AudioManager : MonoBehaviour
 
     [Header("Nhạc nền (BGM)")]
     public AudioClip themeSong;
-    private AudioSource bgmSource;
+    public AudioSource bgmSource;
+    
+    [Header("Fade Settings (MainMenu)")]
+    [Tooltip("Thời gian (giây) để nhạc nền to dần lên")]
+    public float fadeInDuration = 2.0f;
+    [Tooltip("Âm lượng tối đa của nhạc nền (0.0 đến 1.0)")]
+    public float maxBgmVolume = 1.0f;
+    [Tooltip("Âm lượng nhạc nền trong màn chơi chính (rất nhỏ)")]
+    public float gameplayBgmVolume = 0.05f;
 
     [Header("Hiệu ứng âm thanh (SFX)")]
     public AudioClip walking_wooden;
@@ -22,16 +31,19 @@ public class AudioManager : MonoBehaviour
     public AudioClip open_necklace;
     public AudioClip pickup_key;
     public AudioClip complete;
+    
+    [Header("Menu SFX")]
+    public AudioClip hoverSound;
+    public AudioClip clickSound;
 
-    private AudioSource sfxSource;
+    public AudioSource sfxSource;
     private AudioSource footstepsSource;
 
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            // Không phá hủy AudioManager khi chuyển Scene
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -40,9 +52,10 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Tạo kênh phát âm thanh riêng biệt
-        bgmSource = gameObject.AddComponent<AudioSource>();
-        sfxSource = gameObject.AddComponent<AudioSource>();
+        // Tạo kênh phát âm thanh riêng biệt nếu chưa kéo vào Inspector
+        if (bgmSource == null) bgmSource = gameObject.AddComponent<AudioSource>();
+        if (sfxSource == null) sfxSource = gameObject.AddComponent<AudioSource>();
+        
         footstepsSource = gameObject.AddComponent<AudioSource>();
 
         // Cài đặt cho BGM (phát lặp lại vô tận)
@@ -58,16 +71,46 @@ public class AudioManager : MonoBehaviour
         sfxSource.playOnAwake = false;
     }
 
-    void Start()
+    private void OnEnable()
     {
-        if (themeSong != null)
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Nếu vào màn chơi chính (Chapter2), bật lại nhạc ở mức rất nhỏ
+        if (scene.name == "Chapter2" || scene.name == "SampleScene")
         {
-            // Giảm âm lượng nhạc nền xuống cực nhỏ (5% = 0.05) để làm nền siêu nhẹ
-            PlayBGM(themeSong, 0.05f);
+            if (bgmSource != null)
+            {
+                bgmSource.volume = gameplayBgmVolume;
+                if (!bgmSource.isPlaying)
+                {
+                    bgmSource.Play();
+                }
+            }
         }
     }
 
-    // ===== HÀM ĐIỀU KHIỂN NHẠC NỀN =====
+    private void Start()
+    {
+        if (themeSong != null && bgmSource.clip == null)
+        {
+            bgmSource.clip = themeSong;
+        }
+        
+        if (bgmSource != null && bgmSource.clip != null)
+        {
+            // Bắt đầu fade in âm thanh (MainMenu)
+            StartCoroutine(FadeInBGM());
+        }
+    }
+
     public void PlayBGM(AudioClip clip, float volume = 0.5f)
     {
         if (clip != null)
@@ -78,7 +121,54 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // ===== CÁC HÀM GỌI HIỆU ỨNG ÂM THANH =====
+    private IEnumerator FadeInBGM()
+    {
+        float currentTime = 0;
+        bgmSource.volume = 0; 
+        bgmSource.Play();
+
+        while (currentTime < fadeInDuration)
+        {
+            currentTime += Time.deltaTime;
+            bgmSource.volume = Mathf.Lerp(0, maxBgmVolume, currentTime / fadeInDuration);
+            yield return null;
+        }
+        bgmSource.volume = maxBgmVolume;
+    }
+
+    public void StartFadeOutBGM(float duration)
+    {
+        if (bgmSource != null)
+        {
+            StartCoroutine(FadeOutBGM(duration));
+        }
+    }
+
+    private IEnumerator FadeOutBGM(float duration)
+    {
+        float currentTime = 0;
+        float startVolume = bgmSource.volume;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            bgmSource.volume = Mathf.Lerp(startVolume, 0, currentTime / duration);
+            yield return null;
+        }
+
+        bgmSource.volume = 0;
+        bgmSource.Stop(); 
+    }
+
+    public void PlayHoverSound()
+    {
+        if (sfxSource != null && hoverSound != null) sfxSource.PlayOneShot(hoverSound);
+    }
+
+    public void PlayClickSound()
+    {
+        if (sfxSource != null && clickSound != null) sfxSource.PlayOneShot(clickSound);
+    }
 
     public void SetWalkingSound(bool isWalking)
     {
@@ -148,7 +238,6 @@ public class AudioManager : MonoBehaviour
         if (pickup_key != null) sfxSource.PlayOneShot(pickup_key);
     }
 
-    // Hàm phát tiếng complete sau một khoảng thời gian chờ (delay)
     public void PlayCompleteWithDelay(float delayTime)
     {
         StartCoroutine(CompleteDelayRoutine(delayTime));
