@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     private Image buttonImage;
     
@@ -44,6 +44,12 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         {
             hoverEffectObject.SetActive(true);
         }
+
+        // Phát âm thanh hover
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayHoverSound();
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -54,6 +60,15 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
         if (hoverEffectObject != null)
         {
             hoverEffectObject.SetActive(false);
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        // Phát âm thanh click
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayClickSound();
         }
     }
 
