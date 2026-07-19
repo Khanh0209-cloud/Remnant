@@ -110,11 +110,18 @@ public class PlayerMovement : MonoBehaviour
             jumpBufferCounter = 0f; // Reset bộ đệm nhảy
         }
 
-        // 5. Cập nhật Hoạt ảnh (Animation)
+        // 5. Cập nhật Hoạt ảnh (Animation) và Âm thanh bước chân
         if (anim != null)
         {
             anim.SetFloat("Speed", Mathf.Abs(moveInput));
             anim.SetBool("isJumping", !isGrounded);
+        }
+
+        // Bật/tắt tiếng bước chân
+        if (AudioManager.Instance != null)
+        {
+            bool isWalking = isGrounded && Mathf.Abs(moveInput) > 0.1f;
+            AudioManager.Instance.SetWalkingSound(isWalking);
         }
 
         // 6. Nhặt đồ / Tương tác

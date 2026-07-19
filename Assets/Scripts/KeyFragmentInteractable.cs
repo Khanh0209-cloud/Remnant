@@ -23,14 +23,12 @@ public class KeyFragmentInteractable : MonoBehaviour, IInteractable
             sr.color = c;
         }
         
-        // Tắt vật thể đi để chờ Mẹ gọi ra
-        gameObject.SetActive(false);
+        // Chú ý: Không dùng gameObject.SetActive(false) ở đây để tránh lỗi lifecycle của Unity
     }
 
     // Hàm này được gọi bởi Mẹ khi Mẹ biến mất
     public void StartFadeIn()
     {
-        gameObject.SetActive(true);
         StartCoroutine(FadeInRoutine());
     }
 

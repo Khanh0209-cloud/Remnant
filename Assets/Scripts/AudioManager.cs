@@ -10,15 +10,21 @@ public class AudioManager : MonoBehaviour
     private AudioSource bgmSource;
 
     [Header("Hiệu ứng âm thanh (SFX)")]
+    public AudioClip walking_wooden;
+    public AudioClip cassette_appear;
+    public AudioClip open_cassette;
     public AudioClip pickup_paper;
     public AudioClip tap_cassette;
     public AudioClip oppened_vali;
     public AudioClip number_vali;
+    public AudioClip invalid_vali_puzzle;
     public AudioClip solve_vali_puzzle;
+    public AudioClip open_necklace;
     public AudioClip pickup_key;
     public AudioClip complete;
 
     private AudioSource sfxSource;
+    private AudioSource footstepsSource;
 
     void Awake()
     {
@@ -34,13 +40,18 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        // Tạo 2 kênh phát âm thanh riêng biệt
+        // Tạo kênh phát âm thanh riêng biệt
         bgmSource = gameObject.AddComponent<AudioSource>();
         sfxSource = gameObject.AddComponent<AudioSource>();
+        footstepsSource = gameObject.AddComponent<AudioSource>();
 
         // Cài đặt cho BGM (phát lặp lại vô tận)
         bgmSource.loop = true;
         bgmSource.playOnAwake = false;
+        
+        // Cài đặt cho tiếng bước chân (phát lặp lại)
+        footstepsSource.loop = true;
+        footstepsSource.playOnAwake = false;
         
         // Cài đặt cho SFX (không lặp)
         sfxSource.loop = false;
@@ -51,7 +62,8 @@ public class AudioManager : MonoBehaviour
     {
         if (themeSong != null)
         {
-            PlayBGM(themeSong);
+            // Giảm âm lượng nhạc nền xuống cực nhỏ (5% = 0.05) để làm nền siêu nhẹ
+            PlayBGM(themeSong, 0.05f);
         }
     }
 
@@ -67,6 +79,44 @@ public class AudioManager : MonoBehaviour
     }
 
     // ===== CÁC HÀM GỌI HIỆU ỨNG ÂM THANH =====
+
+    public void SetWalkingSound(bool isWalking)
+    {
+        if (walking_wooden == null) return;
+        
+        if (isWalking)
+        {
+            if (!footstepsSource.isPlaying)
+            {
+                footstepsSource.clip = walking_wooden;
+                footstepsSource.Play();
+            }
+        }
+        else
+        {
+            if (footstepsSource.isPlaying) footstepsSource.Stop();
+        }
+    }
+
+    public void PlayCassetteAppear()
+    {
+        if (cassette_appear != null) sfxSource.PlayOneShot(cassette_appear);
+    }
+
+    public void PlayOpenCassette()
+    {
+        if (open_cassette != null) sfxSource.PlayOneShot(open_cassette);
+    }
+
+    public void PlayInvalidValiPuzzle()
+    {
+        if (invalid_vali_puzzle != null) sfxSource.PlayOneShot(invalid_vali_puzzle);
+    }
+
+    public void PlayOpenNecklace()
+    {
+        if (open_necklace != null) sfxSource.PlayOneShot(open_necklace);
+    }
 
     public void PlayPickupPaper()
     {

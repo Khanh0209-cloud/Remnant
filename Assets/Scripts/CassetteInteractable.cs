@@ -21,8 +21,8 @@ public class CassetteInteractable : MonoBehaviour, IInteractable
         {
             puzzlePanel.SetActive(true);
             
-            // Phát âm thanh
-            if (AudioManager.Instance != null) AudioManager.Instance.PlayTapCassette();
+            // Phát âm thanh mở Cassette
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayOpenCassette();
             
             // Khóa nhân vật không cho chạy đi chỗ khác
             if (player != null) player.enabled = false;
@@ -42,8 +42,8 @@ public class CassetteInteractable : MonoBehaviour, IInteractable
         {
             puzzlePanel.SetActive(false);
             
-            // Phát âm thanh
-            if (AudioManager.Instance != null) AudioManager.Instance.PlayTapCassette();
+            // Phát âm thanh đóng Cassette (dùng chung file open_cassette)
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayOpenCassette();
             
             // Thả tự do cho nhân vật chạy tiếp
             if (player != null) player.enabled = true;

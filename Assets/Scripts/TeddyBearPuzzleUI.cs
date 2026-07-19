@@ -72,6 +72,9 @@ public class TeddyBearPuzzleUI : MonoBehaviour
         necklaceZoomClosedObj.SetActive(false);
         necklaceZoomOpenObj.SetActive(true);
         
+        // Phát âm thanh mở dây chuyền
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayOpenNecklace();
+        
         // Đã hoàn thành mini-game, ghi nhận lấy được dây chuyền và tắt UI sau 2 giây
         if (Chapter2Manager.Instance != null)
         {

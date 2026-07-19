@@ -35,6 +35,9 @@ public class Chapter2Manager : MonoBehaviour
         
         if (cassettePlayer != null) cassettePlayer.SetActive(true);
         
+        // Phát âm thanh
+        if (AudioManager.Instance != null) AudioManager.Instance.PlayCassetteAppear();
+        
         // Rung màn hình
         CameraFollow cam = Camera.main.GetComponent<CameraFollow>();
         if (cam != null)

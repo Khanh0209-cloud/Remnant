@@ -85,6 +85,9 @@ public class CombinationLockUI : MonoBehaviour
         {
             Debug.Log("Suitcase: Sai mật mã, ổ khóa không nhúc nhích!");
             
+            // Báo sai: Phát âm thanh
+            if (AudioManager.Instance != null) AudioManager.Instance.PlayInvalidValiPuzzle();
+            
             // Báo sai: Rung màn hình
             CameraFollow cam = Camera.main.GetComponent<CameraFollow>();
             if (cam != null)
