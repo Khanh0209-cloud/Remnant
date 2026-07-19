@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MainMenuController : MonoBehaviour
     [Header("New Panels")]
     public GameObject audioPanel;
     public GameObject guidePanel;
+    public GameObject loadingPanel;
 
     void Start()
     {
@@ -20,13 +22,28 @@ public class MainMenuController : MonoBehaviour
         }
         if (audioPanel != null) audioPanel.SetActive(false);
         if (guidePanel != null) guidePanel.SetActive(false);
+        if (loadingPanel != null) loadingPanel.SetActive(false);
     }
 
     // Hàm gọi khi nhấn nút Play
     public void PlayGame()
     {
-        // Chuyển sang scene SampleScene (nhớ thêm vào Build Settings)
-        SceneManager.LoadScene("SampleScene");
+        StartCoroutine(LoadSceneWithDelay("SampleScene", 5f));
+    }
+
+    private IEnumerator LoadSceneWithDelay(string sceneName, float delaySeconds)
+    {
+        // Hiện màn hình loading
+        if (loadingPanel != null)
+        {
+            loadingPanel.SetActive(true);
+        }
+
+        // Chờ khoảng thời gian (ở đây là 2 giây)
+        yield return new WaitForSeconds(delaySeconds);
+
+        // Chuyển scene
+        SceneManager.LoadScene(sceneName);
     }
 
     // Hàm gọi khi nhấn nút Options
@@ -50,21 +67,25 @@ public class MainMenuController : MonoBehaviour
     public void OpenAudio()
     {
         if (audioPanel != null) audioPanel.SetActive(true);
+        if (optionsPanel != null) optionsPanel.SetActive(false);
     }
 
     public void CloseAudio()
     {
         if (audioPanel != null) audioPanel.SetActive(false);
+        if (optionsPanel != null) optionsPanel.SetActive(true);
     }
 
     public void OpenGuide()
     {
         if (guidePanel != null) guidePanel.SetActive(true);
+        if (optionsPanel != null) optionsPanel.SetActive(false);
     }
 
     public void CloseGuide()
     {
         if (guidePanel != null) guidePanel.SetActive(false);
+        if (optionsPanel != null) optionsPanel.SetActive(true);
     }
 
     // Hàm gọi khi nhấn nút Exit
