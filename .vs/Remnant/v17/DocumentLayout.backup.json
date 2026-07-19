@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Remnant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E98D5775-1C53-E42B-67D7-B1811BC51FFD}|Assembly-CSharp.csproj|c:\\remnant\\assets\\scripts\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E98D5775-1C53-E42B-67D7-B1811BC51FFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E98D5775-1C53-E42B-67D7-B1811BC51FFD}|Assembly-CSharp.csproj|c:\\remnant\\assets\\scripts\\watchitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E98D5775-1C53-E42B-67D7-B1811BC51FFD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\watchitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NPC.cs",
+              "DocumentMoniker": "C:\\Remnant\\Assets\\Scripts\\NPC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC.cs",
+              "ToolTip": "C:\\Remnant\\Assets\\Scripts\\NPC.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswH4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T20:36:38.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WatchItem.cs",
+              "DocumentMoniker": "C:\\Remnant\\Assets\\Scripts\\WatchItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\WatchItem.cs",
+              "ToolTip": "C:\\Remnant\\Assets\\Scripts\\WatchItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\WatchItem.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-18T20:29:11.781Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
